@@ -23,7 +23,7 @@
                     <span class="section">HEADLINES</span>
                 </div>
                 <div class="headlines-wrapper" >
-                    <div class="headline">
+                    <div class="headline" *ngIf="headlines.length > 0">
                         <div class="headline-body pointer" *ngFor="let post of headlines" [routerLink]="['/article', post.slug]">
                             <div class="headline-image">
                                 <img *ngIf="post.image" [img-preloader]="post.image" alt="">

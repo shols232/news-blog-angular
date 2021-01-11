@@ -29,25 +29,28 @@
     </div>
   </nav>
 
-  <div id="sidebarMenu" [@slideInOut]="menuState">
-    <a class="navbar-menu-brand">DaincyBlog</a>
-    <ul class="sidebarMenuInner straight-nav" >
-      <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/']" [routerLinkActiveOptions]="{'exact':true}" routerLinkActive='navlink-active'>Home</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'politics']" routerLinkActive='navlink-active'>Politics</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'business']" routerLinkActive='navlink-active'>Business</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'environment']" routerLinkActive='navlink-active'>Environment</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'entertainment']" routerLinkActive='navlink-active'>Entertainment</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'sports']" routerLinkActive='navlink-active'>Sports</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'humanity']" routerLinkActive='navlink-active'>Humanity</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'research-articles']" routerLinkActive='navlink-active'>Research Articles</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'personal-stories']" routerLinkActive='navlink-active'>Personal Stories</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'interviews']" routerLinkActive='navlink-active'>Interviews</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'women-issues']" routerLinkActive='navlink-active'>Technology</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'technology']" routerLinkActive='navlink-active'>Women Issues</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'videos']" routerLinkActive='navlink-active'>Videos</a>
-          <!-- <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'humanity']" routerLinkActive='navlink-active'>Humanity</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'crime']" routerLinkActive='navlink-active'>Crime</a>
-          <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'politics']" routerLinkActive='navlink-active'>Politics</a> -->
-          <a class="nav-link-b" *ngIf="authenticated" (click)="toggleMenu()" [routerLink]="['/create-post']" routerLinkActive='navlink-active'>Publish</a>
-    </ul>
-  </div>
+  <div class="backdrop" (click)="toggleMenu()" *ngIf="menuState == 'out'"></div>
+    <div id="sidebarMenu" [@slideInOut]="menuState">
+      <a class="navbar-menu-brand">DaincyBlog</a>
+      <ul class="sidebarMenuInner straight-nav" >
+        <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/']" [routerLinkActiveOptions]="{'exact':true}" routerLinkActive='navlink-active'>Home</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'politics']" routerLinkActive='navlink-active'>Politics</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'business']" routerLinkActive='navlink-active'>Business</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'environment']" routerLinkActive='navlink-active'>Environment</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'entertainment']" routerLinkActive='navlink-active'>Entertainment</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'sports']" routerLinkActive='navlink-active'>Sports</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'humanity']" routerLinkActive='navlink-active'>Humanity</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'research-articles']" routerLinkActive='navlink-active'>Research Articles</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'personal-stories']" routerLinkActive='navlink-active'>Personal Stories</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'interviews']" routerLinkActive='navlink-active'>Interviews</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'women-issues']" routerLinkActive='navlink-active'>Technology</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'technology']" routerLinkActive='navlink-active'>Women Issues</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'videos']" routerLinkActive='navlink-active'>Videos</a>
+            <!-- <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'humanity']" routerLinkActive='navlink-active'>Humanity</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'crime']" routerLinkActive='navlink-active'>Crime</a>
+            <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'politics']" routerLinkActive='navlink-active'>Politics</a> -->
+            <a class="nav-link-b" *ngIf="authenticated" (click)="toggleMenu()" [routerLink]="['/create-post']" routerLinkActive='navlink-active'>Publish</a>
+      </ul>
+    </div>
+
+  
