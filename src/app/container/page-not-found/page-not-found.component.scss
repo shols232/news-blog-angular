@@ -150,10 +150,10 @@ html, body {
 }
 
 h1 {
-	font-weight: 800;
+	font-weight: 600;
 	color: $dark;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 1.9em;
 	padding-top: 20px;
 	
 	@media screen and (max-width: $break) {
@@ -171,10 +171,10 @@ h1 {
   margin-left:80px auto 50px auto;
 	background-color: rgba($blue,1.0);
 	color: white;
-	width: 320px;
+	width: 280px;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.3em;
 	border-radius: 5px;
 	cursor: pointer; 
 	// margin-top: 80px;
@@ -185,11 +185,23 @@ h1 {
 		margin: 0 auto;
 		margin-top: 60px;
 		margin-bottom: 50px;
-    	width: 200px;
+    	width: 190px;
   	}
 	
 	&:hover {
 		background-color: rgba($blue,0.8);
 		transition: all .2s linear;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.btn{
+		width: 170px;
+		padding: 15px;
+	}
+	h1 {
+		font-weight: 550;
+		font-size: 1.5em;
+		padding-top: 15px;
 	}
 }
