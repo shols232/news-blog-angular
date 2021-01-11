@@ -1,0 +1,18 @@
+<div >
+    <ul class="pagination pagination_type1 pagination_type3">
+        <li [class.disabled]="current_page_num==1"
+        class="pagination__item" (click)="to_new_page(1)" ><a class="pagination__number">←<span 
+            class="pagination__control pagination__control_prev">first</span></a></li>
+        <li *ngIf="current_page_num-4 >= 1" (click)="to_new_page(current_page_num -4)" class="pagination__item"><a class="pagination__number">{{current_page_num -4}}</a></li>
+        <li *ngIf="current_page_num-3 >= 1" (click)="to_new_page(current_page_num -3)" class="pagination__item"><a class="pagination__number">{{current_page_num -3}}</a></li>
+        <li *ngIf="current_page_num-2 >= 1" (click)="to_new_page(current_page_num -2)" class="pagination__item"><a class="pagination__number">{{current_page_num -2}}</a></li>
+        <li *ngIf="current_page_num-1 >= 1" (click)="to_new_page(current_page_num -1)" class="pagination__item"><a class="pagination__number">{{current_page_num -1}}</a></li>
+        <li class="pagination__item" (click)="to_new_page(current_page_num)"><span class="pagination__number pagination__number_active">{{current_page_num}}</span></li>
+        <li *ngIf="current_page_num+1 <= total_pages" (click)="to_new_page(current_page_num +1)" class="pagination__item"><a class="pagination__number">{{current_page_num +1}}</a></li>
+        <li *ngIf="current_page_num+2 <= total_pages" (click)="to_new_page(current_page_num +2)" class="pagination__item"><a class="pagination__number">{{current_page_num +2}}</a></li>
+        <li *ngIf="current_page_num+3 <= total_pages" (click)="to_new_page(current_page_num +3)" class="pagination__item"><a class="pagination__number">{{current_page_num +3}}</a></li>
+        <li *ngIf="current_page_num+4 <= total_pages" (click)="to_new_page(current_page_num +4)" class="pagination__item"><a class="pagination__number">{{current_page_num +4}}</a></li>
+        <li [class.disabled]="next_page_num" class="pagination__item"><a class="pagination__number"><span 
+            class="pagination__control pagination__control_next">last</span>→</a></li>
+        </ul>
+</div>

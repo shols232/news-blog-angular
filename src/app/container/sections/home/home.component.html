@@ -1,0 +1,130 @@
+<app-navigation></app-navigation>
+<div class="cont">
+    <div class="row">
+        <div class="col-lg-8 col-sm-12">
+            <div class="latest-topic" *ngIf="latest_post" [routerLink]="['article', latest_post.slug]">
+                <div class="latest-topic-header">
+                    <span class="section">{{ latest_post.section }}</span>
+                    <span class="to-right ml-auto"> <span class="blink"><span class="circle"></span>Latest</span> </span>
+                </div>
+                <div class="latest-topic-body pointer" [routerLink]="['/article', latest_post.slug]">
+                    <div class="post-image">
+                        <img *ngIf="latest_post.image" [img-preloader]="latest_post.image"
+                         alt="">
+                         <app-vjs-player class="vjs-player_" *ngIf="latest_post.video" [options]="{ autoplay: false, controls: true, sources: [{ src: latest_post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                    </div>
+                    <div class="post-heading">
+                        <p>{{latest_post.title}}</p>
+                    </div>
+                </div>
+                <div *ngIf="latest_post == null" class="empty">
+                    <p>Nothing here yet...</p>
+                </div>
+            </div>
+            <div class="headlines">
+                <div class="heading">
+                    <span class="section">HEADLINES</span>
+                </div>
+                <div class="headlines-wrapper" >
+                    <div class="headline">
+                            <div class="headline-body pointer" *ngFor="let post of headlines" [routerLink]="['/article', post.slug]">
+                                <div class="headline-image">
+                                    <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                    <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                                </div>
+                                <div class="headline-header">
+                                    <span class="headline-section">{{post.section|uppercase}}</span>
+                                    <p>{{post.title}}</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider">
+                <p class="mx-auto">SECTIONS</p>
+            </div>
+            <div class="blog-sections">
+                <div class="health ">
+                    <div class="heading">
+                        <span class="section">ENTERTAINMENT</span>
+                    </div>
+                    <div class="row single-section">
+                        <div class="headline-body pointer" *ngFor="let post of entertainment_latest" [routerLink]="['/article', post.slug]">
+                            <div class="headline-image">
+                                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                            </div>
+                            <div class="headline-header">
+                                <p>{{post.title}}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="entertainment_latest.length == 0" class="empty">
+                            <p>No posts here yet...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="crime">
+                    <div class="heading">
+                        <span class="section">BUSINESS</span>
+                    </div>
+                    <div class="row single-section">
+                        <div class="headline-body pointer" *ngFor="let post of business_latest" [routerLink]="['/article', post.slug]">
+                            <div class="headline-image">
+                                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                            </div>
+                            <div class="headline-header">
+                                <p>{{post.title}}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="business_latest.length == 0" class="empty">
+                            <p>No posts here yet...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="heading">
+                        <span class="section">POLITICS</span>
+                    </div>
+                    <div class="row single-section">
+                        <div class="headline-body pointer" *ngFor="let post of politics_latest"  [routerLink]="['/article', post.slug]">
+                            <div class="headline-image">
+                                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                            </div>
+                            <div class="headline-header">
+                                <p>{{post.title}}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="politics_latest.length == 0" class="empty">
+                            <p>No posts here yet...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fashion">
+                    <div class="heading">
+                        <span class="section">HUMANITY</span>
+                    </div>
+                    <div class="row single-section">
+                        <div class="headline-body pointer" *ngFor="let post of humanity_latest" [routerLink]="['/article', post.slug]">
+                            <div class="headline-image">
+                                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                            </div>
+                            <div class="headline-header">
+                                <p>{{post.title}}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="humanity_latest.length == 0" class="empty">
+                            <p>No posts here yet...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+            
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

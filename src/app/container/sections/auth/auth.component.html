@@ -1,0 +1,9 @@
+<app-navigation></app-navigation>
+<div class="main">
+    <p class="sign">Sign in</p>
+    <form class="form1" (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <input class="un " ngModel name='username' type="text" placeholder="Username">
+      <input class="pass" ngModel name="password" type="password" placeholder="Password">
+      <button type="submit" [disabled]="!form.dirty" class="submit" >Sign in</button>
+    </form>  
+</div>
