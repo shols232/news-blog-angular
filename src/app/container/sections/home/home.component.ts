@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getPosts(){
     this.getPostsSub = this.sectionsService.getHomePosts().subscribe(data => {
-      if(data.latest){
+      if(data.latest.slug){
         this.latest_post = data.latest
       }else{
         this.latest_post = null
