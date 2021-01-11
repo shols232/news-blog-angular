@@ -323,7 +323,22 @@
 }
 
 @media screen and (max-width:450px){
+    .section-divider{
+        font-size:15.5px;
+    }
+    .blog-sections{
+        .heading{
+            .section{
+                font-size: 14px;
+            }
+        }
+    }
     .headlines{
+        .heading{
+            .section{
+                font-size: 14px;
+            }
+        }
         .headline-header > p{
             font-size: 14.5px !important;
         }

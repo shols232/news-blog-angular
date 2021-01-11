@@ -17,7 +17,7 @@
                         <p>{{latest_post.title}}</p>
                     </div>
                 </div>
-                <div *ngIf="latest_post == null" class="empty">
+                <div *ngIf="!latest_post" class="empty">
                     <p>Nothing here yet...</p>
                 </div>
             </div>
@@ -27,17 +27,20 @@
                 </div>
                 <div class="headlines-wrapper" >
                     <div class="headline">
-                            <div class="headline-body pointer" *ngFor="let post of headlines" [routerLink]="['/article', post.slug]">
-                                <div class="headline-image">
-                                    <img *ngIf="post.image" [img-preloader]="post.image" alt="">
-                                    <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
-                                </div>
-                                <div class="headline-header">
-                                    <span class="headline-section">{{post.section|uppercase}}</span>
-                                    <p>{{post.title}}</p>
-                                </div>
+                        <div class="headline-body pointer" *ngFor="let post of headlines" [routerLink]="['/article', post.slug]">
+                            <div class="headline-image">
+                                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                                <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
                             </div>
+                            <div class="headline-header">
+                                <span class="headline-section">{{post.section|uppercase}}</span>
+                                <p>{{post.title}}</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div *ngIf="headlines.length == 0" class="empty">
+                    <p>No posts here yet...</p>
                 </div>
             </div>
             <div class="section-divider">
