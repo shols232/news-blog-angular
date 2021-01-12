@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private sectionsService: SectionsService,
     private _renderer2: Renderer2,
+    private _document: Document
 ) { }
 
   ngOnInit() {
@@ -40,7 +41,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     let script = this._renderer2.createElement('script');
     script.type = `text/javascript`;
     script.src = './ads.js';
-    this._renderer2.appendChild(this.ad, script);
+    // this._renderer2.appendChild(this.ad, script);
+    this._renderer2.appendChild(this._document.body, script);
   }
 
   getPosts(){
