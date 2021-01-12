@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     //Add 'implements AfterViewInit' to the class.
     let script = this._renderer2.createElement('script');
     script.type = `text/javascript`;
-    script.src = './ads.js';
+    script.src = 'assets/ads.js';
     // this._renderer2.appendChild(this.ad, script);
     this._renderer2.appendChild(this._document.body, script);
   }
