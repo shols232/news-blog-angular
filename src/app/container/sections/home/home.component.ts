@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private sectionsService: SectionsService,
     private _renderer2: Renderer2,
-    private _document: Document
+    @Inject(DOCUMENT) private _document: Document
 ) { }
 
   ngOnInit() {
