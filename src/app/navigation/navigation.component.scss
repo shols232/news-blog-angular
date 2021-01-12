@@ -37,7 +37,8 @@
 
 .navbar-color{
 	// background-color: rgb(134, 38, 185);
-	background:linear-gradient(45deg, rgb(177, 177, 179) 27.5%, #ccc 27.5%);
+	// background:linear-gradient(45deg, rgb(177, 177, 179) 27.5%, #ccc 27.5%);
+	background:linear-gradient(45deg, rgb(185, 52, 174) 27.5%, rgba(209, 107, 209, .8) 27.5%);
 	// background: linear-gradient(to right, );
 }
 
@@ -83,7 +84,7 @@
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: rgba(186, 76, 245);
+	background-color: rgb(46, 25, 141);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: all 0.5s;
@@ -96,7 +97,7 @@
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: rgb(186, 76, 245);
+	background-color: rgb(46, 25, 141);
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: all 0.5s;
@@ -188,10 +189,11 @@
 	}
 	a{
 		flex: 1 1 100%;
+		// display: block;
 		margin: 6px 0 6px 5px;
 		font-size: 17px;
 		color: whitesmoke;
-		border-bottom: 2px solid rgb(178, 177, 179);
+		border-bottom: 2px solid rgba(209, 107, 209, .85);
 	}
 
 	.nav-link-b{
@@ -230,8 +232,8 @@
     width: 45vh;
     padding-top: 15px;
 	background: #fff;
-	border-right: 1.1px solid rgb(117, 117, 117);
-	background-color: #ccc;
+	border-right: 1.1px solid rgb(168, 42, 158);
+	background-color: rgb(189, 62, 178, .99);
 	// background:linear-gradient(45deg, rgb(220, 220, 221) 47.5%, rgb(214, 213, 213) 47.5%);
 	box-shadow: 0 0 5px #ccc;
 	.navbar-menu-brand{

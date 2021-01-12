@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { AuthService } from '../container/sections/auth/auth.service';
 import {  trigger, state, style, transition, animate } from '@angular/animations'
 
@@ -31,6 +31,14 @@ export class NavigationComponent implements OnInit {
     const token = this.authService.token.getValue()
     this.authenticated = !!token
   }
+
+  @HostListener('window:scroll', ['$event'])
+    onWindowScroll($event) {
+      if(this.navOpened){
+        this.toggleMenu()
+      }
+        // this.scrolled = $event.srcElement.scrollTop >= 150;
+    }
 
   menuState:string = 'in';
 
