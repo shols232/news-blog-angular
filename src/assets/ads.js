@@ -16,7 +16,12 @@ var ad1 = document.getElementById('ad1')
     'width' : 300,
     'params' : {}
   };
-  <script type="text/javascript" src="http${location.protocol === 'https:' ? 's' : ''}://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js"></script>`
+  `
+  jsAd2 = document.createElement('script')
+  jsAd2.type = 'text/javascript'
+  jsAd2.src = `http${location.protocol === 'https:' ? 's' : ''}://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js"></script>`
   ad1.appendChild(jsAd1)
+  ad1.appendChild(jsAd2)
+
   console.log('yahooooooooooooooooooo')
 // document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js"></scr' + 'ipt>');
