@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FullSectionPost } from '../shared/section-post.model';
 import { SectionsService } from '../shared/sections.service';
@@ -10,7 +10,7 @@ import { PreviewPost } from './preview-post.model'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   latest_post: FullSectionPost;
   headlines: FullSectionPost[] = [];
   getPostsSub: Subscription;
@@ -32,21 +32,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getPosts()
+}
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
     let script = this._renderer2.createElement('script');
     script.type = `text/javascript`;
-    script.text = `
-    atOptions = {
-      'key' : '11c5f233a048f7ae616cecaa2548fe24',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js"></scr' + 'ipt>');
-    `;
-
+    script.src = './ads.js';
     this._renderer2.appendChild(this.ad, script);
-}
+  }
 
   getPosts(){
     this.getPostsSub = this.sectionsService.getHomePosts().subscribe(data => {
