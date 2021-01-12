@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FullSectionPost } from '../shared/section-post.model';
 import { SectionsService } from '../shared/sections.service';
@@ -17,12 +18,35 @@ export class HomeComponent implements OnInit, OnDestroy {
   business_latest: FullSectionPost[] = [];
   politics_latest: FullSectionPost[] = [];
   humanity_latest: FullSectionPost[] = [];
+  @ViewChild('ad') ad: ElementRef
+  // constructor(private sectionsService: SectionsService) { }
 
-  constructor(private sectionsService: SectionsService) { }
+  // ngOnInit(): void {
+  //   this.getPosts()
+  // }
 
-  ngOnInit(): void {
+  constructor(
+    private sectionsService: SectionsService,
+    private _renderer2: Renderer2,
+) { }
+
+  ngOnInit() {
     this.getPosts()
-  }
+    let script = this._renderer2.createElement('script');
+    script.type = `text/javascript`;
+    script.text = `
+    atOptions = {
+      'key' : '11c5f233a048f7ae616cecaa2548fe24',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js"></scr' + 'ipt>');
+    `;
+
+    this._renderer2.appendChild(this.ad, script);
+}
 
   getPosts(){
     this.getPostsSub = this.sectionsService.getHomePosts().subscribe(data => {
