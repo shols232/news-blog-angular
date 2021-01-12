@@ -33,6 +33,21 @@ let urls = [
                 elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                var done = false
+                var done2 = false
+                elText.onload = elText.onreadystatechanged = function(){
+                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                        done = true
+                        console.log('done')
+                    }
+                } 
+                elAd.onload = elText.onreadystatechanged = function(){
+                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                        done2 = true
+                        console.log('done2')
+                    }
+                }
+
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
