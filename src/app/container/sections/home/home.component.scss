@@ -112,7 +112,12 @@
     display: flex;
     .ad{
         flex:1 1 90%;
+        display: flex;
+        flex-wrap: wrap;
         margin: 2px;
+        div{
+            flex: 0 0 100%;
+        }
     }
 }
 
