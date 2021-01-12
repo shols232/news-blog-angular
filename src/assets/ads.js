@@ -1,19 +1,15 @@
 let urls = [
-    {'opt':{
-        'key' : '11c5f233a048f7ae616cecaa2548fe24',
+    {'opt':`'key' : '11c5f233a048f7ae616cecaa2548fe24',
         'format' : 'iframe',
         'height' : 250,
         'width' : 300,
-        'params' : {}
-        },'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
+        'params' : {}`,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
     },
-    {'opt':{
-        'key' : '3ea17290266c263ed1b6ed4aed845b41',
+    {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
         'format' : 'iframe',
         'height' : 300,
         'width' : 160,
-        'params' : {}
-    },'url':'://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js'
+        'params' : {}`,'url':'://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js'
     }
      ]
 var ad1 = document.getElementById('ad1')
@@ -21,7 +17,7 @@ for (let i=0; i<urls.length; i++){
     var div = document.createElement('div')
     var elText = document.createElement('script')
     elText.type = 'text/javascript'
-    elText.text = `atOptions = ${urls[i].opt}`
+    elText.text = `atOptions = {${urls[i].opt.toString()}}`
     elAd = document.createElement('script')
     elAd.type = 'text/javascript'
     elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
