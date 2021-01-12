@@ -22,16 +22,22 @@ let urls = [
      window.onload = () => {
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<urls.length; i++){
-            var div = document.createElement('div')
-            var elText = document.createElement('script')
-            elText.type = 'text/javascript'
-            elText.text = `atOptions = {${urls[i].opt.toString()}}`
-            elAd = document.createElement('script')
-            elAd.type = 'text/javascript'
-            elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-            div.appendChild(elText)
-            div.appendChild(elAd)
-            ad1.appendChild(div)
+            setTimeout(()=>{
+                if(i==1){
+                    ad1 = document.getElementById('ad2') 
+                }
+                var div = document.createElement('div')
+                var elText = document.createElement('script')
+                elText.type = 'text/javascript'
+                elText.text = `atOptions = {${urls[i].opt.toString()}}`
+                elAd = document.createElement('script')
+                elAd.type = 'text/javascript'
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                div.appendChild(elText)
+                div.appendChild(elAd)
+                ad1.appendChild(div)
+            }, 1000)
+            
         }
      }
 
