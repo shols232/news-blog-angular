@@ -9,6 +9,13 @@ atOptions = {
 'width' : 300,
 'params' : {}
 };
+atOptions = {
+    'key' : '3ea17290266c263ed1b6ed4aed845b41',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+};
 `
 jsAd2 = document.createElement('script')
 jsAd2.type = 'text/javascript'
