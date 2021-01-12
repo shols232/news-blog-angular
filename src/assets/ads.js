@@ -5,12 +5,12 @@ let urls = [
         'width' : 300,
         'params' : {}`,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
     },
-    {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
-        'format' : 'iframe',
-        'height' : 300,
-        'width' : 160,
-        'params' : {}`,'url':'://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js'
-    },
+    // {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
+    //     'format' : 'iframe',
+    //     'height' : 300,
+    //     'width' : 160,
+    //     'params' : {}`,'url':'://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js'
+    // },
     {'opt':`'key' : '50a3a8a1e114ebbf0963dfc4e7ba071b',
 		'format' : 'iframe',
 		'height' : 600,
@@ -21,7 +21,7 @@ let urls = [
 
      window.onload = () => {
         var ad1 = document.getElementById('ad1')
-        for (let i=0; i<1; i++){
+        for (let i=0; i<urls.length; i++){
             var div = document.createElement('div')
             var elText = document.createElement('script')
             elText.type = 'text/javascript'
