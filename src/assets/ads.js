@@ -18,19 +18,23 @@ let urls = [
         'params' : {}`,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
     }
      ]
-var ad1 = document.getElementById('ad1')
-for (let i=0; i<urls.length; i++){
-    var div = document.createElement('div')
-    var elText = document.createElement('script')
-    elText.type = 'text/javascript'
-    elText.text = `atOptions = {${urls[i].opt.toString()}}`
-    elAd = document.createElement('script')
-    elAd.type = 'text/javascript'
-    elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-    div.appendChild(elText)
-    div.appendChild(elAd)
-    ad1.appendChild(div)
-}
+
+     window.onload = () => {
+        var ad1 = document.getElementById('ad1')
+        for (let i=0; i<1; i++){
+            var div = document.createElement('div')
+            var elText = document.createElement('script')
+            elText.type = 'text/javascript'
+            elText.text = `atOptions = {${urls[i].opt.toString()}}`
+            elAd = document.createElement('script')
+            elAd.type = 'text/javascript'
+            elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+            div.appendChild(elText)
+            div.appendChild(elAd)
+            ad1.appendChild(div)
+        }
+     }
+
 
 
 // var ad2 = document.getElementById('ad2')
