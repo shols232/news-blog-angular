@@ -108,6 +108,14 @@
     }
 }
 
+.ads{
+    display: flex;
+    .ad{
+        flex:1 1 90%;
+        margin: 2px;
+    }
+}
+
 .headlines, .blog-sections{
     .heading{
         flex: 1 1 100%;
