@@ -60,7 +60,7 @@ let urls = [
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${options}} 
-                console.log('bruuuuhhhh') 
+                console.log('bruuuuhhhh', ${count}) 
                 alert('sisssss yoooo babyyyyyyyyyyyy')
                 `
 
