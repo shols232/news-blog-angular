@@ -80,11 +80,12 @@ let urls = [
         // setTimeout(function(){
             // setInterval(()=>{
                 (function(count, url, options){
-                    setTimeout(function(){
+                    // setTimeout(function(){
                         console.log('lelelelelelelelelelellelelelelelelelelle')
                     var div = document.createElement('div')
                     var elAd = document.createElement('script')
                     elAd.type = 'text/javascript'
+                    elAd.async = true
                     elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
                     var elText = document.createElement('script')
                     elText.type = 'text/javascript'
@@ -97,7 +98,7 @@ let urls = [
                     div.appendChild(elAd)
                     ad1.appendChild(div)
                     // eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
-                        }, 1000)
+                        // }, 1000)
                 })(count, url, options)
                 
                 
