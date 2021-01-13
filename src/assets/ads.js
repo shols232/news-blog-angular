@@ -38,8 +38,8 @@ let urls = [
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval(${elAd.src})
-                eval(${elAd.data})
+                eval(${elAd.src.toString()})
+                eval(${elAd.text})
                 `
                 
                 var done = false
@@ -82,8 +82,8 @@ let urls = [
                 elText.text = `atOptions = {${urls[0].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval(${elAd.src})
-                eval(${elAd.data})
+                eval(${elAd.src.toString()})
+                eval(${elAd.text})
                 `
                 
                 var done = false
