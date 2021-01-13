@@ -21,8 +21,8 @@ let urls = [
     }
      ]
 
-     var ad1 = document.getElementById('ad1')
      window.onload = () => {
+        var ad1 = document.getElementById('ad1')
         for (let i=0; i<urls.length; i++){
                 setTimeout(function(){
                     console.log('yamammmaiiiii', i)
@@ -73,7 +73,7 @@ let urls = [
             // }, 5000)
             
         }
-    }
+    // }
         // runIt()
     //  }
     function insertAds(count, url, options){
