@@ -21,7 +21,7 @@ let urls = [
     }
      ]
 
-     
+
      window.onload = () => {
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<urls.length; i++){
@@ -30,14 +30,17 @@ let urls = [
                     ad1 = document.getElementById('ad2') 
                 }
                 var div = document.createElement('div')
+                var elAd = document.createElement('script')
+                elAd.type = 'text/javascript'
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
-                alert('sisssss yoooo')`
-                var elAd = document.createElement('script')
-                elAd.type = 'text/javascript'
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                alert('sisssss yoooo')
+                eval(${elAd.innerHTML})
+                `
+                
                 var done = false
                 var done2 = false
                 elText.onload = elText.onreadystatechanged = function(){
