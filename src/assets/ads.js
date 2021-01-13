@@ -21,134 +21,58 @@ let urls = [
     }
      ]
 
+
      window.onload = () => {
-        var ad1 = document.getElementById('ad1')
-        for (let i=0; i<urls.length; i++){
-                // setTimeout(() => {
-                    console.log('yamammmaiiiii', i)
-                    insertAds(i, url=urls[i].url, options=urls[i].opt.toString())
-                    // insertAds(i, url=urls[i].url, options=urls[i].opt.toString())
-                //     (function(count=i, url=urls[i].url, options=urls[i].opt.toString()){
-                //     console.log('lelelelelelelelelelellelelelelelelelelle')
-                //     var div = document.createElement('div')
-                //     var elAd = document.createElement('script')
-                //     elAd.type = 'text/javascript'
-                //     elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
-                //     var elText = document.createElement('script')
-                //     elText.type = 'text/javascript'
-                //     elText.text = `atOptions = {${options}} 
-                //     console.log('bruuuuhhhh', ${count}) 
-                //     alert('sisssss yoooo babyyyyyyyyyyyy${count}')
-                //     `
+        var ad1 = document.getElementById('ad2')
+        for (let i=2; i<urls.length; i++){
+            setTimeout(()=>{
+                var div = document.createElement('div')
+                var elAd = document.createElement('script')
+                elAd.type = 'text/javascript'
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                var elText = document.createElement('script')
+                elText.type = 'text/javascript'
+                elText.text = `atOptions = {${urls[i].opt.toString()}} 
+                console.log('bruuuuhhhh') 
+                alert('sisssss yoooo babyyyyyyyyyyyy')
+                `
 
-                //     div.appendChild(elText)
-                //     div.appendChild(elAd)
-                //     ad1.appendChild(div)
-                //     eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
-                        
-                // })(count, url, options)
-            // }, 4000)
-            }
-            // insertAds(i, urls[i].url, urls[i].opt.toString())
-            // setTimeout(()=>{
-            //     // if(i==1){
-            //     //     ad1 = document.getElementById('ad2') 
-            //     // }
-            //     var div = document.createElement('div')
-            //     var elAd = document.createElement('script')
-            //     elAd.type = 'text/javascript'
-            //     elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-            //     var elText = document.createElement('script')
-            //     elText.type = 'text/javascript'
-            //     elText.text = `atOptions = {${urls[i].opt.toString()}} 
-            //     console.log('bruuuuhhhh') 
-            //     alert('sisssss yoooo babyyyyyyyyyyyy')
-            //     `
-
-            //     div.appendChild(elText)
-            //     div.appendChild(elAd)
-            //     ad1.appendChild(div)
-            //     // eval(ad1.getElementsByTagName('script')[0].innerHTML)
-                
-            // }, 5000)
-            
+                div.appendChild(elText)
+                div.appendChild(elAd)
+                ad1.appendChild(div)
+            }, 5000)
+            runIt(0)
+            runIt(1)
         }
-    // }
-        // runIt()
-    //  }
-    function insertAds(count, url, options){
-        // setInterval()
-        // setTimeout(function(){
-            // setInterval(()=>{
-                // (function(count, url, options){
-                    setTimeout(function(){
-                        console.log('lelelelelelelelelelellelelelelelelelelle')
-                    var div = document.createElement('div')
-                    var elAd = document.createElement('script')
-                    elAd.type = 'text/javascript'
-                    elAd.async = true
-                    elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
-                    var elText = document.createElement('script')
-                    elText.type = 'text/javascript'
-                    elText.text = `atOptions = {${options}} 
-                    console.log('bruuuuhhhh', ${count}) 
-                    alert('sisssss yoooo babyyyyyyyyyyyy${count}')
-                    `
-
-                    div.appendChild(elText)
-                    div.appendChild(elAd)
-                    ad1.appendChild(div)
-                    // eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
-                        // }, 1000)
-                // })(count, url, options)
-                
-                
-            },6000)
-                
-        // }, 5000)
      }
 
-    //  function runIt(){
-    //     var ad1 = document.getElementById('ad1')
-    //     for (let i=1; i<urls.length; i++){
-    //         setTimeout(()=>{
-    //             if(i==1){
-    //                 ad1 = document.getElementById('ad2') 
-    //             }
-    //             var div = document.createElement('div')
-    //             var elAd = document.createElement('script')
-    //             elAd.type = 'text/javascript'
-    //             // elAd.async = true
-    //             elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-    //             var elText = document.createElement('script')
-    //             elText.type = 'text/javascript'
-    //             elText.text = `atOptions = {${urls[i].opt.toString()}} 
-    //             console.log('bruuuuhhhh') 
-    //             alert('sisssss yoooo')
-    //             `
-                
-    //             // var done = false
-    //             // var done2 = false
-    //             // elText.onload = elText.onreadystatechanged = function(){
-    //             //     if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-    //             //         done = true
-    //             //         console.log('done')
-    //             //     }
-    //             // } 
-    //             // elAd.onload = elText.onreadystatechanged = function(){
-    //             //     if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-    //             //         done2 = true
-    //             //         console.log('done2')
-    //             //     }
-    //             // }
 
-    //             div.appendChild(elText)
-    //             div.appendChild(elAd)
-    //             ad1.appendChild(div)
-    //         }, 10000)
+     function runIt(num){
+        var ad1 = document.getElementById('ad1')
+        for (let i=0; i<1; i++){
+            setTimeout(()=>{
+                if(i==1){
+                    ad1 = document.getElementById('ad2') 
+                }
+                var div = document.createElement('div')
+                var elAd = document.createElement('script')
+                elAd.type = 'text/javascript'
+                elAd.async = true
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[num].url}`
+                var elText = document.createElement('script')
+                elText.type = 'text/javascript'
+                elText.text = `atOptions = {${urls[num].opt.toString()}} 
+                console.log('bruuuuhhhh') 
+                alert('sisssss yoooo')
+                `
+
+                div.appendChild(elText)
+                div.appendChild(elAd)
+                ad1.appendChild(div)
+            }, 3000)
             
-    //     }
-    //  }
+        }
+     }
 
 
 
