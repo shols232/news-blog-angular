@@ -38,8 +38,9 @@ let urls = [
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval(${elAd.src.toString()})
-                eval(${elAd.text})
+                elAd.onload = () => {
+                    eval(${elAd.text})
+                }
                 `
                 
                 var done = false
@@ -60,6 +61,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
+                eval(ad1.getElementsByTagName('script')[0].innerHTML)
             }, 1000)
             
         }
@@ -82,8 +84,9 @@ let urls = [
                 elText.text = `atOptions = {${urls[0].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval(${elAd.src.toString()})
-                eval(${elAd.text})
+                elAd.onload = () => {
+                    eval(${elAd.text})
+                }
                 `
                 
                 var done = false
