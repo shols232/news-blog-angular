@@ -21,6 +21,7 @@ let urls = [
     }
      ]
 
+     
      window.onload = () => {
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<urls.length; i++){
