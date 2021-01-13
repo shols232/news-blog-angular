@@ -24,7 +24,29 @@ let urls = [
      var ad1 = document.getElementById('ad1')
      window.onload = () => {
         for (let i=0; i<urls.length; i++){
-            insertAds(i, urls[i].url, urls[i].opt.toString())
+            if (i<urls.length){
+                setTimeout(function(){
+                    (function(count=i, url=urls[i].url, options=urls[i].opt.toString()){
+                    console.log('lelelelelelelelelelellelelelelelelelelle')
+                    var div = document.createElement('div')
+                    var elAd = document.createElement('script')
+                    elAd.type = 'text/javascript'
+                    elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
+                    var elText = document.createElement('script')
+                    elText.type = 'text/javascript'
+                    elText.text = `atOptions = {${options}} 
+                    console.log('bruuuuhhhh', ${count}) 
+                    alert('sisssss yoooo babyyyyyyyyyyyy${count}')
+                    `
+
+                    div.appendChild(elText)
+                    div.appendChild(elAd)
+                    ad1.appendChild(div)
+                    eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
+                        }, 4000)
+                })(count, url, options)
+            }
+            // insertAds(i, urls[i].url, urls[i].opt.toString())
             // setTimeout(()=>{
             //     // if(i==1){
             //     //     ad1 = document.getElementById('ad2') 
