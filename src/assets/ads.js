@@ -31,7 +31,9 @@ let urls = [
                 var div = document.createElement('div')
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[i].opt.toString()}} console.log('bruuuuhhhh') alert('sisssss yoooo')`
+                elText.text = `atOptions = {${urls[i].opt.toString()}} 
+                console.log('bruuuuhhhh') 
+                alert('sisssss yoooo')`
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
