@@ -4,8 +4,6 @@ let urls = [
         'height' : 250,
         'width' : 300,
         'params' : {}
-        console.log('she no get designer)
-        alert('buntecky yoooo)
         `,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
     },
     // {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
@@ -19,7 +17,6 @@ let urls = [
 		'height' : 600,
 		'width' : 160,
         'params' : {}
-        console.log('ayeeeeee)
         `,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
     }
      ]
@@ -34,8 +31,8 @@ let urls = [
                 var div = document.createElement('div')
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[i].opt.toString()}}`
-                elAd = document.createElement('script')
+                elText.text = `atOptions = {${urls[i].opt.toString()}} console.log('bruuuuhhhh') alert('sisssss yoooo')`
+                var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
                 var done = false
