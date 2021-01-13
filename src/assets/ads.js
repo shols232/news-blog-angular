@@ -43,8 +43,9 @@ let urls = [
                     div.appendChild(elAd)
                     ad1.appendChild(div)
                     eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
-                        }, 4000)
+                        
                 })(count, url, options)
+            }, 4000)
             }
             // insertAds(i, urls[i].url, urls[i].opt.toString())
             // setTimeout(()=>{
