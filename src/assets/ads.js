@@ -61,7 +61,7 @@ let urls = [
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${options}} 
                 console.log('bruuuuhhhh', ${count}) 
-                alert('sisssss yoooo babyyyyyyyyyyyy')
+                alert('sisssss yoooo babyyyyyyyyyyyy${count}')
                 `
 
                 div.appendChild(elText)
