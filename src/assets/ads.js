@@ -33,7 +33,6 @@ let urls = [
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-                elAd.async = true
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
@@ -63,10 +62,10 @@ let urls = [
                 div.appendChild(elAd)
                 ad1.appendChild(div)
                 eval(ad1.getElementsByTagName('script')[0].innerHTML)
-            }, 6000)
+                runIt()
+            }, 10000)
             
         }
-        runIt()
      }
 
 
@@ -87,9 +86,6 @@ let urls = [
                 elText.text = `atOptions = {${urls[0].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                elAd.onload = () => {
-                    eval(${elAd.innerHTML})
-                }
                 `
                 
                 var done = false
@@ -110,7 +106,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 1000)
+            }, 10000)
             
         }
      }
