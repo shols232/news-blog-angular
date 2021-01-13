@@ -25,7 +25,7 @@ let urls = [
      window.onload = () => {
         var ad1 = document.getElementById('ad2')
         for (let i=1; i<urls.length; i++){
-            // setTimeout(()=>{
+            setTimeout(()=>{
                 // if(i==1){
                 //     ad1 = document.getElementById('ad2') 
                 // }
@@ -40,8 +40,8 @@ let urls = [
                 alert('sisssss yoooo babyyyyyyyyyyyy')
                 `
                 
-                // var done = false
-                // var done2 = false
+                var done = false
+                var done2 = false
                 // elText.onload = elText.onreadystatechanged = function(){
                 //     if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
                 //         done = true
@@ -60,7 +60,7 @@ let urls = [
                 ad1.appendChild(div)
                 eval(ad1.getElementsByTagName('script')[0].innerHTML)
                 runIt()
-            // }, 1000)
+            }, 1000)
             
         }
      }
@@ -69,14 +69,14 @@ let urls = [
      function runIt(){
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<1; i++){
-            // setTimeout(()=>{
+            setTimeout(()=>{
                 if(i==1){
                     ad1 = document.getElementById('ad2') 
                 }
                 var div = document.createElement('div')
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
-                elAd.async = true
+                // elAd.async = true
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[0].url}`
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
@@ -103,7 +103,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            // }, 1000)
+            }, 1000)
             
         }
      }
