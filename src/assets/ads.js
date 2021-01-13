@@ -38,7 +38,7 @@ let urls = [
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval(${elAd.innerHTML})
+                eval('<script type="text/javascript" src="http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}"></script>')
                 `
                 
                 var done = false
