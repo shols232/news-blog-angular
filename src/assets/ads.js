@@ -26,25 +26,26 @@ let urls = [
         for (let i=0; i<urls.length; i++){
             if (i<urls.length){
                 setTimeout(function(){
-                    (function(count=i, url=urls[i].url, options=urls[i].opt.toString()){
-                    console.log('lelelelelelelelelelellelelelelelelelelle')
-                    var div = document.createElement('div')
-                    var elAd = document.createElement('script')
-                    elAd.type = 'text/javascript'
-                    elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
-                    var elText = document.createElement('script')
-                    elText.type = 'text/javascript'
-                    elText.text = `atOptions = {${options}} 
-                    console.log('bruuuuhhhh', ${count}) 
-                    alert('sisssss yoooo babyyyyyyyyyyyy${count}')
-                    `
+                    insertAds(i, url=urls[i].url, options=urls[i].opt.toString())
+                //     (function(count=i, url=urls[i].url, options=urls[i].opt.toString()){
+                //     console.log('lelelelelelelelelelellelelelelelelelelle')
+                //     var div = document.createElement('div')
+                //     var elAd = document.createElement('script')
+                //     elAd.type = 'text/javascript'
+                //     elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
+                //     var elText = document.createElement('script')
+                //     elText.type = 'text/javascript'
+                //     elText.text = `atOptions = {${options}} 
+                //     console.log('bruuuuhhhh', ${count}) 
+                //     alert('sisssss yoooo babyyyyyyyyyyyy${count}')
+                //     `
 
-                    div.appendChild(elText)
-                    div.appendChild(elAd)
-                    ad1.appendChild(div)
-                    eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
+                //     div.appendChild(elText)
+                //     div.appendChild(elAd)
+                //     ad1.appendChild(div)
+                //     eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
                         
-                })(count, url, options)
+                // })(count, url, options)
             }, 4000)
             }
             // insertAds(i, urls[i].url, urls[i].opt.toString())
@@ -95,7 +96,7 @@ let urls = [
                     div.appendChild(elText)
                     div.appendChild(elAd)
                     ad1.appendChild(div)
-                    eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
+                    // eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
                         }, 1000)
                 })(count, url, options)
                 
