@@ -55,23 +55,28 @@ let urls = [
         // setInterval()
         // setTimeout(function(){
             // setInterval(()=>{
-                
-                console.log('lelelelelelelelelelellelelelelelelelelle')
-                var div = document.createElement('div')
-                var elAd = document.createElement('script')
-                elAd.type = 'text/javascript'
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
-                var elText = document.createElement('script')
-                elText.type = 'text/javascript'
-                elText.text = `atOptions = {${options}} 
-                console.log('bruuuuhhhh', ${count}) 
-                alert('sisssss yoooo babyyyyyyyyyyyy${count}')
-                `
+                (function(count, url, options){
+                    setTimeout(function(){
+                        console.log('lelelelelelelelelelellelelelelelelelelle')
+                    var div = document.createElement('div')
+                    var elAd = document.createElement('script')
+                    elAd.type = 'text/javascript'
+                    elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${url}`
+                    var elText = document.createElement('script')
+                    elText.type = 'text/javascript'
+                    elText.text = `atOptions = {${options}} 
+                    console.log('bruuuuhhhh', ${count}) 
+                    alert('sisssss yoooo babyyyyyyyyyyyy${count}')
+                    `
 
-                div.appendChild(elText)
-                div.appendChild(elAd)
-                ad1.appendChild(div)
-                eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
+                    div.appendChild(elText)
+                    div.appendChild(elAd)
+                    ad1.appendChild(div)
+                    eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
+                        }, 1000)
+                })(count, url, options)
+                
+                
             // },4000)
                 
         // }, 5000)
