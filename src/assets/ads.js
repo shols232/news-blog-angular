@@ -3,7 +3,10 @@ let urls = [
         'format' : 'iframe',
         'height' : 250,
         'width' : 300,
-        'params' : {}`,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
+        'params' : {}
+        console.log('she no get designer)
+        alert('buntecky yoooo)
+        `,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
     },
     // {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
     //     'format' : 'iframe',
@@ -15,7 +18,9 @@ let urls = [
 		'format' : 'iframe',
 		'height' : 600,
 		'width' : 160,
-        'params' : {}`,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
+        'params' : {}
+        console.log('ayeeeeee)
+        `,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
     }
      ]
 
@@ -42,7 +47,7 @@ let urls = [
                     }
                 } 
                 elAd.onload = elText.onreadystatechanged = function(){
-                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                    if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
                         done2 = true
                         console.log('done2')
                     }
