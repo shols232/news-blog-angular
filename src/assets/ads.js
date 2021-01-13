@@ -40,14 +40,14 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 5000)
-            runIt(0)
-            runIt(1)
+            }, 10000)
         }
+        // runIt(0)
+        runIt()
      }
 
 
-     function runIt(num){
+     function runIt(){
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<1; i++){
             setTimeout(()=>{
@@ -58,10 +58,10 @@ let urls = [
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.async = true
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[num].url}`
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[num].opt.toString()}} 
+                elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
                 `
@@ -69,7 +69,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 3000)
+            }, 5000)
             
         }
      }
