@@ -23,23 +23,24 @@ let urls = [
 
 
      window.onload = () => {
-        var ad1 = document.getElementById('ad1')
-        for (let i=0; i<urls.length; i++){
+        var ad1 = document.getElementById('ad2')
+        for (let i=1; i<urls.length; i++){
             setTimeout(()=>{
-                if(i==1){
-                    ad1 = document.getElementById('ad2') 
-                }
+                // if(i==1){
+                //     ad1 = document.getElementById('ad2') 
+                // }
                 var div = document.createElement('div')
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                elAd.async = true
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
-                alert('sisssss yoooo')
+                alert('sisssss yoooo babyyyyyyyyyyyy')
                 elAd.onload = () => {
-                    eval(${elAd.text})
+                    eval(${elAd.innerHTML})
                 }
                 `
                 
@@ -62,13 +63,14 @@ let urls = [
                 div.appendChild(elAd)
                 ad1.appendChild(div)
                 eval(ad1.getElementsByTagName('script')[0].innerHTML)
-            }, 1000)
+            }, 6000)
             
         }
+        runIt()
      }
 
 
-     window.onload = () => {
+     function runIt(){
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<1; i++){
             setTimeout(()=>{
@@ -78,6 +80,7 @@ let urls = [
                 var div = document.createElement('div')
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
+                elAd.async = true
                 elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[0].url}`
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
@@ -85,7 +88,7 @@ let urls = [
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
                 elAd.onload = () => {
-                    eval(${elAd.text})
+                    eval(${elAd.innerHTML})
                 }
                 `
                 
