@@ -58,11 +58,12 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-                eval(ad1.getElementsByTagName('script')[0].innerHTML)
-                runIt()
+                // eval(ad1.getElementsByTagName('script')[0].innerHTML)
+                
             }, 5000)
             
         }
+        runIt()
      }
 
 
