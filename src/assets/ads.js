@@ -38,7 +38,52 @@ let urls = [
                 elText.text = `atOptions = {${urls[i].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
-                eval('<script type="text/javascript" src="http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}"></script>')
+                eval(${elAd.src})
+                eval(${elAd.data})
+                `
+                
+                var done = false
+                var done2 = false
+                elText.onload = elText.onreadystatechanged = function(){
+                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                        done = true
+                        console.log('done')
+                    }
+                } 
+                elAd.onload = elText.onreadystatechanged = function(){
+                    if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                        done2 = true
+                        console.log('done2')
+                    }
+                }
+
+                div.appendChild(elText)
+                div.appendChild(elAd)
+                ad1.appendChild(div)
+            }, 1000)
+            
+        }
+     }
+
+
+     window.onload = () => {
+        var ad1 = document.getElementById('ad1')
+        for (let i=0; i<1; i++){
+            setTimeout(()=>{
+                if(i==1){
+                    ad1 = document.getElementById('ad2') 
+                }
+                var div = document.createElement('div')
+                var elAd = document.createElement('script')
+                elAd.type = 'text/javascript'
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[0].url}`
+                var elText = document.createElement('script')
+                elText.type = 'text/javascript'
+                elText.text = `atOptions = {${urls[0].opt.toString()}} 
+                console.log('bruuuuhhhh') 
+                alert('sisssss yoooo')
+                eval(${elAd.src})
+                eval(${elAd.data})
                 `
                 
                 var done = false
