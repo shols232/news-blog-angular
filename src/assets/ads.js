@@ -25,7 +25,7 @@ let urls = [
      window.onload = () => {
         var ad1 = document.getElementById('ad2')
         for (let i=1; i<urls.length; i++){
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 // if(i==1){
                 //     ad1 = document.getElementById('ad2') 
                 // }
@@ -40,27 +40,27 @@ let urls = [
                 alert('sisssss yoooo babyyyyyyyyyyyy')
                 `
                 
-                var done = false
-                var done2 = false
-                elText.onload = elText.onreadystatechanged = function(){
-                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-                        done = true
-                        console.log('done')
-                    }
-                } 
-                elAd.onload = elText.onreadystatechanged = function(){
-                    if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-                        done2 = true
-                        console.log('done2')
-                    }
-                }
+                // var done = false
+                // var done2 = false
+                // elText.onload = elText.onreadystatechanged = function(){
+                //     if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                //         done = true
+                //         console.log('done')
+                //     }
+                // } 
+                // elAd.onload = elText.onreadystatechanged = function(){
+                //     if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                //         done2 = true
+                //         console.log('done2')
+                //     }
+                // }
 
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
                 eval(ad1.getElementsByTagName('script')[0].innerHTML)
                 runIt()
-            }, 5000)
+            // }, 1000)
             
         }
      }
@@ -69,7 +69,7 @@ let urls = [
      function runIt(){
         var ad1 = document.getElementById('ad1')
         for (let i=0; i<1; i++){
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 if(i==1){
                     ad1 = document.getElementById('ad2') 
                 }
@@ -85,25 +85,25 @@ let urls = [
                 alert('sisssss yoooo')
                 `
                 
-                var done = false
-                var done2 = false
-                elText.onload = elText.onreadystatechanged = function(){
-                    if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-                        done = true
-                        console.log('done')
-                    }
-                } 
-                elAd.onload = elText.onreadystatechanged = function(){
-                    if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
-                        done2 = true
-                        console.log('done2')
-                    }
-                }
+                // var done = false
+                // var done2 = false
+                // elText.onload = elText.onreadystatechanged = function(){
+                //     if(!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                //         done = true
+                //         console.log('done')
+                //     }
+                // } 
+                // elAd.onload = elText.onreadystatechanged = function(){
+                //     if(!done2 && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")){
+                //         done2 = true
+                //         console.log('done2')
+                //     }
+                // }
 
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 3000)
+            // }, 1000)
             
         }
      }
