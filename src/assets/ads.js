@@ -24,7 +24,7 @@ let urls = [
      var ad1 = document.getElementById('ad1')
     //  window.onload = () => {
         for (let i=0; i<urls.length; i++){
-            insertAds(urls[i].url, urls[i].opt.toString())
+            insertAds(i, urls[i].url, urls[i].opt.toString())
             // setTimeout(()=>{
             //     // if(i==1){
             //     //     ad1 = document.getElementById('ad2') 
@@ -50,8 +50,8 @@ let urls = [
         }
         // runIt()
     //  }
-    function insertAds(url, options){
-        setTimeout(()=>{
+    function insertAds(count, url, options){
+        setTimeout(function(){
                 var div = document.createElement('div')
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
@@ -66,7 +66,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-                eval(ad1.getElementsByTagName('script')[0].innerHTML)
+                eval(ad1.getElementsByTagName('script')[count].innerHTML)
         }, 5000)
      }
 
