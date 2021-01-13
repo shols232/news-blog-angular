@@ -54,7 +54,8 @@ let urls = [
     function insertAds(count, url, options){
         // setInterval()
         // setTimeout(function(){
-            setInterval(()=>{
+            // setInterval(()=>{
+                
                 console.log('lelelelelelelelelelellelelelelelelelelle')
                 var div = document.createElement('div')
                 var elAd = document.createElement('script')
@@ -70,8 +71,8 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-                eval(ad1.getElementsByTagName('script')[count].innerHTML)
-            },4000)
+                // eval(ad1.getElementsByTagName('script')[count].innerHTML)
+            // },4000)
                 
         // }, 5000)
      }
