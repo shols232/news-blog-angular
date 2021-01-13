@@ -71,7 +71,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-                // eval(ad1.getElementsByTagName('script')[count].innerHTML)
+                eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
             // },4000)
                 
         // }, 5000)
