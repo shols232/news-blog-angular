@@ -60,7 +60,7 @@ let urls = [
                 ad1.appendChild(div)
                 eval(ad1.getElementsByTagName('script')[0].innerHTML)
                 runIt()
-            }, 1000)
+            }, 10000)
             
         }
      }
@@ -103,7 +103,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 1000)
+            }, 10000)
             
         }
      }
