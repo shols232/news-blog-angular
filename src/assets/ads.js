@@ -43,13 +43,16 @@ let urls = [
             }, 10000)
         }
         // runIt(0)
-        runIt()
+        runIt(2)
      }
 
 
-     function runIt(){
+     function runIt(num){
+         if(num<1){
+             return;
+         }
         var ad1 = document.getElementById('ad1')
-        for (let i=0; i<1; i++){
+        // for (let i=0; i<num; i++){
             setTimeout(()=>{
                 if(i==1){
                     ad1 = document.getElementById('ad2') 
@@ -58,10 +61,10 @@ let urls = [
                 var elAd = document.createElement('script')
                 elAd.type = 'text/javascript'
                 elAd.async = true
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[num-1].url}`
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[i].opt.toString()}} 
+                elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
                 console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
                 `
@@ -70,8 +73,8 @@ let urls = [
                 div.appendChild(elAd)
                 ad1.appendChild(div)
             }, 5000)
-            
-        }
+            runIt(num-1)
+        // }
      }
 
 
