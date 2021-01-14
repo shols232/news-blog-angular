@@ -58,27 +58,16 @@ let urls = [
             return;
         }
        var ad1 = document.getElementById('ad1')
-       // for (let i=0; i<num; i++){
-           setTimeout(()=>{
-            //    if(num==1){
-            //        ad1 = document.getElementById('ad2') 
-            //    }
-               var div = document.createElement('div')
-               var elAd = document.createElement('script')
-               elAd.type = 'text/javascript'
-               elAd.async = true
-               elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[num-1].url}`
-            //    var elText = document.createElement('script')
-            //    elText.type = 'text/javascript'
-            //    elText.text = `atOptions = {${urls_revhits[num-1].opt.toString()}} 
-            //    console.log('bruuuuhhhh') 
-            //    alert('sisssss yoooo')
-            //    `
+        setTimeout(()=>{
+            var div = document.createElement('div')
+            var elAd = document.createElement('script')
+            elAd.type = 'text/javascript'
+            elAd.async = true
+            elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[num-1].url}`
 
-            //    div.appendChild(elText)
-               div.appendChild(elAd)
-               ad1.appendChild(div)
-           }, num *3500)
+            div.appendChild(elAd)
+            ad1.appendChild(div)
+        }, num *2500)
            runIt2(num-1)
      }
 
@@ -88,9 +77,6 @@ let urls = [
          }
         var ad1 = document.getElementById('ad2')
         setTimeout(()=>{
-            // if(num==1){
-            //     ad1 = document.getElementById('ad2') 
-            // }
             var div = document.createElement('div')
             var elAd = document.createElement('script')
             elAd.type = 'text/javascript'
@@ -99,50 +85,14 @@ let urls = [
             var elText = document.createElement('script')
             elText.type = 'text/javascript'
             elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
-            console.log('bruuuuhhhh') 
-            // alert('sisssss yoooo')
+            console.log('bruuuuhhhh')
             `
 
             div.appendChild(elText)
             div.appendChild(elAd)
             ad1.appendChild(div)
-        }, num *1500)
+        }, num *1000)
         runIt(num-1)
-        // }
      }
 
-
-
-// var ad2 = document.getElementById('ad2')
-// jsAd1Text = document.createElement('script')
-// jsAd1Text.type = 'text/javascript'
-// jsAd1Text.text = `
-// atOptions = {
-// 'key' : '11c5f233a048f7ae616cecaa2548fe24',
-// 'format' : 'iframe',
-// 'height' : 250,
-// 'width' : 300,
-// 'params' : {}
-// };
-// `
-// jsAd2Text = document.createElement('script')
-// jsAd2Text.type = 'text/javascript'
-// jsAd2Text.text = `atOptions = {
-//     'key' : '3ea17290266c263ed1b6ed4aed845b41',
-//     'format' : 'iframe',
-//     'height' : 300,
-//     'width' : 160,
-//     'params' : {}
-// };`
-
-// jsAd1 = document.createElement('script')
-// jsAd1.type = 'text/javascript'
-// jsAd1.src = `http${location.protocol === 'https:' ? 's' : ''}://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js`
-// jsAd2 = document.createElement('script')
-// jsAd2.type = 'text/javascript'
-// jsAd2.src = `http${location.protocol === 'https:' ? 's' : ''}://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js`
-// ad1.appendChild(jsAd1Text)
-// ad1.appendChild(jsAd1)
-// ad2.appendChild(jsAd2Text)
-// ad2.appendChild(jsAd2)
 

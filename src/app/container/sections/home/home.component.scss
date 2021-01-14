@@ -251,11 +251,11 @@
         display: flex;
         overflow: scroll;
         scrollbar-width: none;
-        max-height: 850px;
+        max-height: 800px;
         width: 100vw;
         margin-left: 0;
         margin-right: 0;
-        padding: 0;
+        padding: 0 0 400px 0;
 
         &::-webkit-scrollbar-thumb{
             display: none;
