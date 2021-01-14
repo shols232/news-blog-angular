@@ -72,7 +72,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, 5000)
+            }, num *1000)
             runIt(num-1)
         // }
      }
