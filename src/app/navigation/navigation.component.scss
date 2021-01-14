@@ -59,8 +59,8 @@
 .navbar-nav{
 	padding: 0;
 	margin: 0;
-	width: 75%;
-	margin: 0 12.5%;
+	width: 82%;
+	margin: 0 9%;
 	text-align:center;
 	display: flex;
 }
@@ -68,10 +68,10 @@
 
 .nav-link{
 	text-decoration: none;
-	font-size: 18.7px;
+	font-size: 20px;
 	display: block;
 	padding: 5px .55rem;
-	font-weight:300;
+	font-weight:320;
 	color: whitesmoke !important;
     margin-right: 1.15rem;
 	position: relative;
@@ -84,7 +84,7 @@
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: rgb(46, 25, 141);
+	background-color: rgb(226, 9, 136);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: all 0.5s;
@@ -97,7 +97,7 @@
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: rgb(46, 25, 141);
+	background-color: rgb(226, 9, 136);
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: all 0.5s;
@@ -114,7 +114,7 @@
 
 .navlink-active{
     transform: scaleX(1);
-    color:  rgb(117, 31, 163);
+    color:  rgb(13, 123, 197) !important;
 }
 
 
