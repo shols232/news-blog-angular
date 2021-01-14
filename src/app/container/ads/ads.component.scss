@@ -1,0 +1,63 @@
+
+.ads-headers{
+    font-size: 14.5px;
+}
+.ads{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+
+    .ad{
+        flex-direction: column;
+        flex:1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2px;
+        div{
+            img{
+                max-height: 100px !important;
+            }
+            flex: 0 0 100%;
+        }
+    }
+}
+
+@media screen and (max-width:991px){
+    .ads{
+        display: flex;
+        overflow: scroll;
+        scrollbar-width: none;
+        max-height: 850px;
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 400px;
+
+        &::-webkit-scrollbar-thumb{
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        .ad{
+            flex-direction: row;
+            flex:1 1 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2px;
+            div{
+                overflow: hidden;
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

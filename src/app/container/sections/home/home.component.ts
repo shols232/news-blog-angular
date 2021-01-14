@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   business_latest: FullSectionPost[] = [];
   politics_latest: FullSectionPost[] = [];
   humanity_latest: FullSectionPost[] = [];
-  @ViewChild('ad') ad: ElementRef
   // constructor(private sectionsService: SectionsService) { }
 
   // ngOnInit(): void {
@@ -35,23 +34,23 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.getPosts()
 }
 
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    let adscript = this._document.getElementById('adscritptcont')
-    if (adscript){
-      return;
-    }
-    let script = this._renderer2.createElement('script');
-    script.type = `text/javascript`;
-    script.src = 'assets/ads.js';
-    console.log('ayemaleeeee')
-    let adcont = this._renderer2.createElement('div');
-    adcont.setAttribute("id", 'adscritptcont')
-    this._renderer2.appendChild(adcont, script)
-    // this._renderer2.appendChild(this.ad, script);
-    this._renderer2.appendChild(this._document.body, adcont);
-  }
+  // ngAfterViewInit(): void {
+  //   //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+  //   //Add 'implements AfterViewInit' to the class.
+  //   let adscript = this._document.getElementById('adscritptcont')
+  //   if (adscript){
+  //     return;
+  //   }
+  //   let script = this._renderer2.createElement('script');
+  //   script.type = `text/javascript`;
+  //   script.src = 'assets/ads.js';
+  //   console.log('ayemaleeeee')
+  //   let adcont = this._renderer2.createElement('div');
+  //   adcont.setAttribute("id", 'adscritptcont')
+  //   this._renderer2.appendChild(adcont, script)
+  //   // this._renderer2.appendChild(this.ad, script);
+  //   this._renderer2.appendChild(this._document.body, adcont);
+  // }
 
   getPosts(){
     this.getPostsSub = this.sectionsService.getHomePosts().subscribe(data => {
