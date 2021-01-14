@@ -12,17 +12,19 @@ let urls = [
         'width' : 160,
         'params' : {}`,'url':'://www.gatetodisplaycontent.com/3ea17290266c263ed1b6ed4aed845b41/invoke.js'
     },
-    {'opt':`'key' : '50a3a8a1e114ebbf0963dfc4e7ba071b',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-        'params' : {}
-        `,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
-    }
+    // {'opt':`'key' : '50a3a8a1e114ebbf0963dfc4e7ba071b',
+	// 	'format' : 'iframe',
+	// 	'height' : 600,
+	// 	'width' : 160,
+    //     'params' : {}
+    //     `,'url':'://www.gatetodisplaycontent.com/50a3a8a1e114ebbf0963dfc4e7ba071b/invoke.js'
+    // }
      ]
 
      let urls_revhits = [
         {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
+        {'url': '://p422935.clksite.com/adServe/banners?tid=422935_829305_3'},
+        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_4'}
     ]
 
 
@@ -62,8 +64,12 @@ let urls = [
         //     }, 10000)
         // }
         // runIt(0)
-        runIt(3)
-        runIt2(2)
+
+        // url list count
+        runIt(urls.length)
+
+        // url_revhits list count
+        runIt2(urls_revhits.length)
      }
 
      function runIt2(num){
