@@ -23,7 +23,6 @@ let urls = [
 
      let urls_revhits = [
         {'url':'//p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
-        {'url':'//www.greatdexchange.com/a/display.php?r=4054579'}
     ]
 
 
@@ -92,7 +91,7 @@ let urls = [
             //    div.appendChild(elText)
                div.appendChild(elAd)
                ad1.appendChild(div)
-           }, num *2500)
+           }, num *7500)
            runIt2(num-1)
      }
 
@@ -114,7 +113,7 @@ let urls = [
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
-                console.log('bruuuuhhhh') 
+                // console.log('bruuuuhhhh') 
                 alert('sisssss yoooo')
                 `
 

@@ -229,8 +229,8 @@
         }
     }
     .cont{
-        width: 80%;
-        margin: 0 10%;
+        width: 85%;
+        margin: 0 7.5%;
     }
     .latest-topic-body{
         width: 90%;
@@ -251,6 +251,10 @@
 }
 
 @media screen and (max-width:750px){
+    .cont{
+        width: 95%;
+        margin: 2.5%;
+    }
         .headlines{
             .headline-header > p{
                 font-size: 15.5px !important;
@@ -268,10 +272,6 @@
 }
 
 @media screen and (max-width:600px){
-    .cont{
-        width: 100%;
-        margin: 0;
-    }
     .headlines-wrapper{
         .headline{
             display:flex;
