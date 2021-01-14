@@ -54,7 +54,7 @@ let urls = [
         var ad1 = document.getElementById('ad1')
         // for (let i=0; i<num; i++){
             setTimeout(()=>{
-                if(i==1){
+                if(num==1){
                     ad1 = document.getElementById('ad2') 
                 }
                 var div = document.createElement('div')
