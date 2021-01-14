@@ -36,7 +36,7 @@ let urls = [
           elAd.type = 'text/javascript'
           elAd.async = true
           elAd.setAttribute('data-cfasync', false)
-          elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[i].url}`
+          elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[j].url}`
           var elText = document.createElement('script')
           elText.type = 'text/javascript'
 
