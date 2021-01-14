@@ -87,9 +87,9 @@ let urls = [
        var ad1 = document.getElementById('ad1')
        // for (let i=0; i<num; i++){
            setTimeout(()=>{
-               if(num==1){
-                   ad1 = document.getElementById('ad2') 
-               }
+            //    if(num==1){
+            //        ad1 = document.getElementById('ad2') 
+            //    }
                var div = document.createElement('div')
                var elAd = document.createElement('script')
                elAd.type = 'text/javascript'
@@ -105,7 +105,7 @@ let urls = [
             //    div.appendChild(elText)
                div.appendChild(elAd)
                ad1.appendChild(div)
-           }, num *4500)
+           }, num *3500)
            runIt2(num-1)
      }
 
@@ -113,29 +113,28 @@ let urls = [
          if(num<1){
              return;
          }
-        var ad1 = document.getElementById('ad1')
-        // for (let i=0; i<num; i++){
-            setTimeout(()=>{
-                if(num==1){
-                    ad1 = document.getElementById('ad2') 
-                }
-                var div = document.createElement('div')
-                var elAd = document.createElement('script')
-                elAd.type = 'text/javascript'
-                elAd.async = true
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[num-1].url}`
-                var elText = document.createElement('script')
-                elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
-                console.log('bruuuuhhhh') 
-                // alert('sisssss yoooo')
-                `
+        var ad1 = document.getElementById('ad2')
+        setTimeout(()=>{
+            // if(num==1){
+            //     ad1 = document.getElementById('ad2') 
+            // }
+            var div = document.createElement('div')
+            var elAd = document.createElement('script')
+            elAd.type = 'text/javascript'
+            elAd.async = true
+            elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[num-1].url}`
+            var elText = document.createElement('script')
+            elText.type = 'text/javascript'
+            elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
+            console.log('bruuuuhhhh') 
+            // alert('sisssss yoooo')
+            `
 
-                div.appendChild(elText)
-                div.appendChild(elAd)
-                ad1.appendChild(div)
-            }, num *2500)
-            runIt(num-1)
+            div.appendChild(elText)
+            div.appendChild(elAd)
+            ad1.appendChild(div)
+        }, num *1500)
+        runIt(num-1)
         // }
      }
 

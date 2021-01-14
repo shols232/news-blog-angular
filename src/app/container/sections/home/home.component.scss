@@ -112,7 +112,7 @@
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    max-width: inherit;
+    width: 100%;
     scrollbar-width: none;
     &::-webkit-scrollbar {
         width: 0px;  /* Remove scrollbar space */
@@ -229,6 +229,8 @@
         overflow: scroll;
         scrollbar-width: none;
         max-height: 400px;
+        width: 100vw;
+
         &::-webkit-scrollbar-thumb{
             display: none;
         }
@@ -240,7 +242,7 @@
             flex-direction: row;
             flex:1 1 100%;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             margin: 2px;
             div{
                 overflow: hidden;
@@ -360,6 +362,10 @@
 }
 
 @media screen and (max-width:500px){
+    .cont{
+        width: 100%;
+        margin: 0;
+    }
     .headlines-wrapper{
         .headline{
             margin: 10px 0;
