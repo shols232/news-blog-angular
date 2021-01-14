@@ -29,21 +29,21 @@ let urls = [
 
      window.onload = () => {
         var ad1 = document.getElementById('ad2')
-        for(let j=0; j<urls_revhits.length; j++){
-            console.log('lelelelelelelelelelellelelelelelelelelle')
-          var div = document.createElement('div')
-          var elAd = document.createElement('script')
-          elAd.type = 'text/javascript'
-          elAd.async = true
-          elAd.setAttribute('data-cfasync', false)
-          elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[j].url}`
-          var elText = document.createElement('script')
-          elText.type = 'text/javascript'
+        // for(let j=0; j<urls_revhits.length; j++){
+        //     console.log('lelelelelelelelelelellelelelelelelelelle')
+        //   var div = document.createElement('div')
+        //   var elAd = document.createElement('script')
+        //   elAd.type = 'text/javascript'
+        //   elAd.async = true
+        //   elAd.setAttribute('data-cfasync', false)
+        //   elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[j].url}`
+        //   var elText = document.createElement('script')
+        //   elText.type = 'text/javascript'
 
-          div.appendChild(elText)
-          div.appendChild(elAd)
-          ad1.appendChild(div)
-        }
+        //   div.appendChild(elText)
+        //   div.appendChild(elAd)
+        //   ad1.appendChild(div)
+        // }
         // for (let i=2; i<urls.length; i++){
         //     setTimeout(()=>{
         //         var div = document.createElement('div')
@@ -82,14 +82,14 @@ let urls = [
                elAd.type = 'text/javascript'
                elAd.async = true
                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[num-1].url}`
-               var elText = document.createElement('script')
-               elText.type = 'text/javascript'
+            //    var elText = document.createElement('script')
+            //    elText.type = 'text/javascript'
             //    elText.text = `atOptions = {${urls_revhits[num-1].opt.toString()}} 
             //    console.log('bruuuuhhhh') 
             //    alert('sisssss yoooo')
             //    `
 
-               div.appendChild(elText)
+            //    div.appendChild(elText)
                div.appendChild(elAd)
                ad1.appendChild(div)
            }, num *2500)
