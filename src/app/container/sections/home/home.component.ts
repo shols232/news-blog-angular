@@ -38,12 +38,19 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
+    let adscript = this._document.getElementById('adscritptcont')
+    if (adscript){
+      return;
+    }
     let script = this._renderer2.createElement('script');
     script.type = `text/javascript`;
     script.src = 'assets/ads.js';
     console.log('ayemaleeeee')
+    let adcont = this._renderer2.createElement('div');
+    adcont.setAttribute("id", 'adscritptcont')
+    this._renderer2.appendChild(adcont, script)
     // this._renderer2.appendChild(this.ad, script);
-    this._renderer2.appendChild(this._document.body, script);
+    this._renderer2.appendChild(this._document.body, adcont);
   }
 
   getPosts(){
