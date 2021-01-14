@@ -21,8 +21,31 @@ let urls = [
   }
    ]
 
+let urls_revhits = [
+    {'url':'//p422935.clksite.com/adServe/banners?tid=422935_829305_0'}
+]
+
    window.onload = () => {
       var ad1 = document.getElementById('ad1')
+      for(let j=0; j<urls_revhits.length; j++){
+            console.log('lelelelelelelelelelellelelelelelelelelle')
+          var div = document.createElement('div')
+          var elAd = document.createElement('script')
+          elAd.type = 'text/javascript'
+          elAd.async = true
+          elAd.setAttribute('data-cfasync', false)
+          elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[i].url}`
+          var elText = document.createElement('script')
+          elText.type = 'text/javascript'
+        //  elText.text = `atOptions = {${options}} 
+        //   console.log('bruuuuhhhh', ${i}) 
+        //   alert('sisssss yoooo babyyyyyyyyyyyy${count}')
+        //   `
+
+          div.appendChild(elText)
+          div.appendChild(elAd)
+          ad1.appendChild(div)
+      }
       for (let i=0; i<urls.length; i++){
               // setTimeout(() => {
                   console.log('yamammmaiiiii', i)
@@ -77,12 +100,8 @@ let urls = [
       // runIt()
   //  }
   function insertAds(count, url, options){
-      // setInterval()
-      // setTimeout(function(){
-          // setInterval(()=>{
-              // (function(count, url, options){
                   setTimeout(function(){
-                      console.log('lelelelelelelelelelellelelelelelelelelle')
+                    console.log('lelelelelelelelelelellelelelelelelelelle')
                   var div = document.createElement('div')
                   var elAd = document.createElement('script')
                   elAd.type = 'text/javascript'
@@ -98,14 +117,7 @@ let urls = [
                   div.appendChild(elText)
                   div.appendChild(elAd)
                   ad1.appendChild(div)
-                  // eval(ad1.getElementsByTagName('script')[count + 1].innerHTML)
-                      // }, 1000)
-              // })(count, url, options)
-              
-              
           },6000)
-              
-      // }, 5000)
    }
 
   //  function runIt(){
