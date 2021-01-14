@@ -230,6 +230,10 @@
 }
 
 @media screen and (max-width:991px){
+    .cont{
+        padding: 0;
+    }
+
     .ads{
         display: flex;
         overflow: scroll;
@@ -259,9 +263,10 @@
             }
         }
     }
-    .cont{
+    .main-content{
         width: 90%;
         margin: 0 5%;
+        padding: 8vw;
     }
     .latest-topic-body{
         .post-image {
@@ -273,10 +278,10 @@
 }
 
 @media screen and (max-width:750px){
-    .cont{
+    .main-content{
         width: 95%;
         margin: 2.5%;
-        padding:1.5%;
+        padding:5vw;
     }
         .headlines{
             .headline-header > p{

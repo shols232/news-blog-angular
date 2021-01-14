@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
 <div class="cont">
     <div class="row">
-        <div class="col-lg-8 col-sm-12">
+        <div class="main-content col-lg-8 col-sm-12">
             <div class="latest-topic" *ngIf="latest_post" [routerLink]="['article', latest_post.slug]">
                 <div class="latest-topic-header">
                     <span class="section">{{ latest_post.section }}</span>
