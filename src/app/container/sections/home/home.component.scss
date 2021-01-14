@@ -108,6 +108,9 @@
     }
 }
 
+.ads-headers{
+    font-size: 14.5px;
+}
 .ads{
     display: flex;
     flex-wrap: wrap;
@@ -127,6 +130,9 @@
         flex-wrap: wrap;
         margin: 2px;
         div{
+            img{
+                max-height: 100px !important;
+            }
             flex: 0 0 100%;
         }
     }
@@ -228,8 +234,11 @@
         display: flex;
         overflow: scroll;
         scrollbar-width: none;
-        max-height: 400px;
+        max-height: 700px;
         width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
 
         &::-webkit-scrollbar-thumb{
             display: none;
@@ -251,8 +260,8 @@
         }
     }
     .cont{
-        width: 85%;
-        margin: 0 7.5%;
+        width: 90%;
+        margin: 0 5%;
     }
     .latest-topic-body{
         .post-image {
@@ -267,6 +276,7 @@
     .cont{
         width: 95%;
         margin: 2.5%;
+        padding:1.5%;
     }
         .headlines{
             .headline-header > p{
@@ -362,6 +372,9 @@
 }
 
 @media screen and (max-width:500px){
+    .ads{
+        margin-bottom: 700px;
+    }
     .cont{
         width: 100%;
         margin: 0;
