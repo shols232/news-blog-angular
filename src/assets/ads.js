@@ -23,7 +23,7 @@ let urls = [
 
      let urls_revhits = [
         {'url':'//p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
-        {'url':'https://www.greatdexchange.com/a/display.php?r=4054579'}
+        {'url':'//www.greatdexchange.com/a/display.php?r=4054579'}
     ]
 
 
@@ -64,8 +64,37 @@ let urls = [
         // }
         // runIt(0)
         runIt(3)
+        runIt2(2)
      }
 
+     function runIt2(num){
+        if(num<1){
+            return;
+        }
+       var ad1 = document.getElementById('ad1')
+       // for (let i=0; i<num; i++){
+           setTimeout(()=>{
+               if(num==1){
+                   ad1 = document.getElementById('ad2') 
+               }
+               var div = document.createElement('div')
+               var elAd = document.createElement('script')
+               elAd.type = 'text/javascript'
+               elAd.async = true
+               elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[num-1].url}`
+               var elText = document.createElement('script')
+               elText.type = 'text/javascript'
+            //    elText.text = `atOptions = {${urls_revhits[num-1].opt.toString()}} 
+            //    console.log('bruuuuhhhh') 
+            //    alert('sisssss yoooo')
+            //    `
+
+               div.appendChild(elText)
+               div.appendChild(elAd)
+               ad1.appendChild(div)
+           }, num *2500)
+           runIt2(num-1)
+     }
 
      function runIt(num){
          if(num<1){
@@ -92,7 +121,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, num *3500)
+            }, num *3000)
             runIt(num-1)
         // }
      }

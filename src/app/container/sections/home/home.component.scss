@@ -213,6 +213,43 @@
     }
 }
 
+@media screen and (max-width:991px){
+    .ads{
+        display: flex;
+        .ad{
+            flex-direction: row;
+            flex:1 1 90%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2px;
+            div{
+                overflow: hidden;
+                flex: 0 0 100%;
+            }
+        }
+    }
+    .cont{
+        width: 80%;
+        margin: 0 10%;
+    }
+    .latest-topic-body{
+        width: 90%;
+        margin: 0 5%;
+        .post-image {
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            img{
+                height: 51vh;
+                transition: all 0.4s ease-in-out;
+                width: 100%;
+            }
+        }
+        .post-heading > p{
+            font-size: 28px;
+        }
+    }
+}
+
 @media screen and (max-width:750px){
         .headlines{
             .headline-header > p{
@@ -231,6 +268,10 @@
 }
 
 @media screen and (max-width:600px){
+    .cont{
+        width: 100%;
+        margin: 0;
+    }
     .headlines-wrapper{
         .headline{
             display:flex;
