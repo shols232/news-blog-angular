@@ -10,7 +10,7 @@ import { PreviewPost } from './preview-post.model'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HomeComponent implements OnInit, OnDestroy {
   latest_post: FullSectionPost;
   headlines: FullSectionPost[] = [];
   getPostsSub: Subscription;
