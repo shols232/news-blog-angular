@@ -192,11 +192,7 @@
 }
 }
 
-@media screen and (max-width:767px){
-  .cont{
-    padding-bottom: 24.5rem;
-  }
-}
+
 
 @media screen and (max-width:745px){
   .wrapper{
@@ -254,7 +250,7 @@
   }
 }
 @media screen and (max-width:600px){
-  .cont{padding: 0 5vw 21rem 5vw;}
+  .cont{padding: 0 5vw 0 5vw;}
   .vjs-player_{
     height: 90%;
     width: 94%;
@@ -355,7 +351,7 @@
 }
 
 @media screen and (max-width:500px){
-  .cont{padding: 0 2.5vw 21rem 2.5vw;}
+  .cont{padding: 0 2.5vw 0 2.5vw;}
 .latest-post{
   .post-content{
     
@@ -383,7 +379,7 @@
 }
 
 @media screen and (max-width:400px){
-  .cont{padding: 0 .5vw 21rem .5vw;}
+  .cont{padding: 0 .5vw 0 .5vw;}
   .stories{
     .story{
       .story-head {
