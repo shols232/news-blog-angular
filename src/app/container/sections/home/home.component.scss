@@ -111,6 +111,15 @@
 .ads{
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    max-width: inherit;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+
     .ad{
         flex-direction: column;
         flex:1 1 100%;
@@ -223,6 +232,10 @@
         &::-webkit-scrollbar-thumb{
             display: none;
         }
+        ::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
         .ad{
             flex-direction: row;
             flex:1 1 100%;
@@ -240,19 +253,10 @@
         margin: 0 7.5%;
     }
     .latest-topic-body{
-        width: 90%;
-        margin: 0 5%;
         .post-image {
-            overflow: hidden;
-            transition: all 0.4s ease-in-out;
             img{
                 height: 51vh;
-                transition: all 0.4s ease-in-out;
-                width: 100%;
             }
-        }
-        .post-heading > p{
-            font-size: 28px;
         }
     }
 }

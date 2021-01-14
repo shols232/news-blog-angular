@@ -31,7 +31,8 @@ let urls = [
      let urls_revhits = [
         {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
         {'url': '://p422935.clksite.com/adServe/banners?tid=422935_829305_3'},
-        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_4'}
+        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_4'},
+        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_5'}
     ]
 
 
@@ -104,7 +105,7 @@ let urls = [
             //    div.appendChild(elText)
                div.appendChild(elAd)
                ad1.appendChild(div)
-           }, num *7500)
+           }, num *4500)
            runIt2(num-1)
      }
 
@@ -133,7 +134,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, num *3000)
+            }, num *2500)
             runIt(num-1)
         // }
      }
