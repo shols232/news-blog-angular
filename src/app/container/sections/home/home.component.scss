@@ -19,19 +19,19 @@
         font-size: 17px;
         color: #c91e51;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        .circle:before {
-                content: '';
-                border: 2.1px solid #c91e51;
-                // background-color: #c91e51 !important;
-                position: absolute;
-                top: 15.1px;
-                right: 85px;
-                width: 10px;
-                height: 10px;
-                background: transparent;
-                border-radius: 50%;
-                z-index: 0;
-          }
+        // .circle:before {
+        //         content: '';
+        //         border: 2.1px solid #c91e51;
+        //         // background-color: #c91e51 !important;
+        //         position: absolute;
+        //         top: 15.1px;
+        //         right: 85px;
+        //         width: 10px;
+        //         height: 10px;
+        //         background: transparent;
+        //         border-radius: 50%;
+        //         z-index: 0;
+        //   }
         .blink{
             animation: blink 2.2s linear infinite;
             margin-right: 10px;
