@@ -1,6 +1,5 @@
 <div class="cont">
-    <div class="row">
-        <div class="main-content col-lg-8 col-sm-12">
+        <div class="main-content">
             <div class="latest-topic" *ngIf="latest_post" [routerLink]="['article', latest_post.slug]">
                 <div class="latest-topic-header">
                     <span class="section">{{ latest_post.section }}</span>
@@ -121,16 +120,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 tolly col-sm-12">
-            <!-- <h4 class="ads-headers">Adverts</h4>
-            <div class="ads">
-                <div #ad id="ad1" class="ad lm">
-                </div>
-                <div #ad id="ad2" class="ad">
-                </div>
-            </div> -->
-            <app-ads></app-ads>
-        </div>
-    </div>
 </div>
 <!-- <app-footer></app-footer> -->
