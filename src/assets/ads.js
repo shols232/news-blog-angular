@@ -37,47 +37,20 @@ let urls = [
 
 
      window.onload = () => {
-        var ad1 = document.getElementById('ad2')
-        // for(let j=0; j<urls_revhits.length; j++){
-        //     console.log('lelelelelelelelelelellelelelelelelelelle')
-        //   var div = document.createElement('div')
-        //   var elAd = document.createElement('script')
-        //   elAd.type = 'text/javascript'
-        //   elAd.async = true
-        //   elAd.setAttribute('data-cfasync', false)
-        //   elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[j].url}`
-        //   var elText = document.createElement('script')
-        //   elText.type = 'text/javascript'
+        var ad1 = document.getElementById('ad1')
+        var ad2 = document.getElementById('ad2')
+        // var nav = document.getElementById('nav-ad')
 
-        //   div.appendChild(elText)
-        //   div.appendChild(elAd)
-        //   ad1.appendChild(div)
-        // }
-        // for (let i=2; i<urls.length; i++){
-        //     setTimeout(()=>{
-        //         var div = document.createElement('div')
-        //         var elAd = document.createElement('script')
-        //         elAd.type = 'text/javascript'
-        //         elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-        //         var elText = document.createElement('script')
-        //         elText.type = 'text/javascript'
-        //         elText.text = `atOptions = {${urls[i].opt.toString()}} 
-        //         console.log('bruuuuhhhh') 
-        //         alert('sisssss yoooo babyyyyyyyyyyyy')
-        //         `
+        if(ad1){
+            // url list count
+            runIt(urls.length)
+        }
+        
 
-        //         div.appendChild(elText)
-        //         div.appendChild(elAd)
-        //         ad1.appendChild(div)
-        //     }, 10000)
-        // }
-        // runIt(0)
-
-        // url list count
-        runIt(urls.length)
-
-        // url_revhits list count
-        runIt2(urls_revhits.length)
+        if(ad2){
+            // url_revhits list count
+            runIt2(urls_revhits.length)
+        }
      }
 
      function runIt2(num){
