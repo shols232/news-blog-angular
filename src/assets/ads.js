@@ -21,29 +21,49 @@ let urls = [
     }
      ]
 
+     let urls_revhits = [
+        {'url':'//p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
+        {'url':'https://www.greatdexchange.com/a/display.php?r=4054579'}
+    ]
+
 
      window.onload = () => {
         var ad1 = document.getElementById('ad2')
-        for (let i=2; i<urls.length; i++){
-            setTimeout(()=>{
-                var div = document.createElement('div')
-                var elAd = document.createElement('script')
-                elAd.type = 'text/javascript'
-                elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
-                var elText = document.createElement('script')
-                elText.type = 'text/javascript'
-                elText.text = `atOptions = {${urls[i].opt.toString()}} 
-                console.log('bruuuuhhhh') 
-                alert('sisssss yoooo babyyyyyyyyyyyy')
-                `
+        for(let j=0; j<urls_revhits.length; j++){
+            console.log('lelelelelelelelelelellelelelelelelelelle')
+          var div = document.createElement('div')
+          var elAd = document.createElement('script')
+          elAd.type = 'text/javascript'
+          elAd.async = true
+          elAd.setAttribute('data-cfasync', false)
+          elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls_revhits[i].url}`
+          var elText = document.createElement('script')
+          elText.type = 'text/javascript'
 
-                div.appendChild(elText)
-                div.appendChild(elAd)
-                ad1.appendChild(div)
-            }, 10000)
+          div.appendChild(elText)
+          div.appendChild(elAd)
+          ad1.appendChild(div)
         }
+        // for (let i=2; i<urls.length; i++){
+        //     setTimeout(()=>{
+        //         var div = document.createElement('div')
+        //         var elAd = document.createElement('script')
+        //         elAd.type = 'text/javascript'
+        //         elAd.src = `http${location.protocol === 'https:' ? 's' : ''}${urls[i].url}`
+        //         var elText = document.createElement('script')
+        //         elText.type = 'text/javascript'
+        //         elText.text = `atOptions = {${urls[i].opt.toString()}} 
+        //         console.log('bruuuuhhhh') 
+        //         alert('sisssss yoooo babyyyyyyyyyyyy')
+        //         `
+
+        //         div.appendChild(elText)
+        //         div.appendChild(elAd)
+        //         ad1.appendChild(div)
+        //     }, 10000)
+        // }
         // runIt(0)
-        runIt(2)
+        runIt(3)
      }
 
 
@@ -72,7 +92,7 @@ let urls = [
                 div.appendChild(elText)
                 div.appendChild(elAd)
                 ad1.appendChild(div)
-            }, num *4000)
+            }, num *3500)
             runIt(num-1)
         // }
      }
