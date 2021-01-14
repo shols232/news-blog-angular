@@ -22,7 +22,7 @@ let urls = [
      ]
 
      let urls_revhits = [
-        {'url':'//p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
+        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
     ]
 
 
@@ -113,8 +113,8 @@ let urls = [
                 var elText = document.createElement('script')
                 elText.type = 'text/javascript'
                 elText.text = `atOptions = {${urls[num-1].opt.toString()}} 
-                // console.log('bruuuuhhhh') 
-                alert('sisssss yoooo')
+                console.log('bruuuuhhhh') 
+                // alert('sisssss yoooo')
                 `
 
                 div.appendChild(elText)
