@@ -110,9 +110,10 @@
 
 .ads{
     display: flex;
+    flex-wrap: wrap;
     .ad{
         flex-direction: column;
-        flex:1 1 90%;
+        flex:1 1 100%;
         display: flex;
         flex-wrap: wrap;
         margin: 2px;
@@ -216,11 +217,17 @@
 @media screen and (max-width:991px){
     .ads{
         display: flex;
+        overflow: scroll;
+        scrollbar-width: none;
+        max-height: 400px;
+        &::-webkit-scrollbar-thumb{
+            display: none;
+        }
         .ad{
             flex-direction: row;
-            flex:1 1 90%;
+            flex:1 1 100%;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             margin: 2px;
             div{
                 overflow: hidden;

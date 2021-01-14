@@ -6,6 +6,13 @@ let urls = [
         'params' : {}
         `,'url':'://www.gatetodisplaycontent.com/11c5f233a048f7ae616cecaa2548fe24/invoke.js'
     },
+    {'opt':`'key' : '1fbea0da52d5901c0c56e04842f997df',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+        `,'url':'://www.gatetodisplaycontent.com/1fbea0da52d5901c0c56e04842f997df/invoke.js'
+    },
     {'opt':`'key' : '3ea17290266c263ed1b6ed4aed845b41',
         'format' : 'iframe',
         'height' : 300,
