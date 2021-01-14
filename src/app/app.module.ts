@@ -36,6 +36,7 @@ import { VideosComponent } from './container/sections/videos/videos.component';
 import { ForiddenPageComponent } from './foridden-page/foridden-page.component';
 import { TechnologyComponent } from './container/sections/technology/technology.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdsComponent } from './container/ads/ads.component';
 
 
 
@@ -70,6 +71,7 @@ import { FooterComponent } from './footer/footer.component';
     ForiddenPageComponent,
     TechnologyComponent,
     FooterComponent,
+    AdsComponent,
     
   ],
   imports: [

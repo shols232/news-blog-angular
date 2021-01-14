@@ -3,8 +3,8 @@
     flex-direction: column;
     min-height: 120vh;
     justify-content: space-between;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    // padding-left: 5vw;
+    // padding-right: 5vw;
     padding-bottom: 25rem;
 }
 
@@ -230,6 +230,19 @@
 }
 
 @media screen and (max-width:991px){
+    .latest-topic-header{
+        .to-right{
+            .circle:before {
+                position: absolute;
+                top: 15.1px;
+                right: 115px;
+              }
+        }
+    }
+    
+    .row{
+        margin:0 !important;
+    }
     .cont{
         padding: 0;
     }
@@ -238,7 +251,7 @@
         display: flex;
         overflow: scroll;
         scrollbar-width: none;
-        max-height: 700px;
+        max-height: 850px;
         width: 100vw;
         margin-left: 0;
         margin-right: 0;
@@ -265,8 +278,7 @@
     }
     .main-content{
         width: 90%;
-        margin: 0 5%;
-        padding: 8vw;
+        padding:0 8vw;
     }
     .latest-topic-body{
         .post-image {
@@ -280,8 +292,7 @@
 @media screen and (max-width:750px){
     .main-content{
         width: 95%;
-        margin: 2.5%;
-        padding:5vw;
+        padding:0 5vw;
     }
         .headlines{
             .headline-header > p{
@@ -377,9 +388,6 @@
 }
 
 @media screen and (max-width:500px){
-    .ads{
-        margin-bottom: 700px;
-    }
     .cont{
         width: 100%;
         margin: 0;
