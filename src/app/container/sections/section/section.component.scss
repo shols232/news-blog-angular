@@ -1,11 +1,9 @@
 .cont{
     display:flex;
     flex-direction: column;
-    min-height: 140vh;
+    min-height: 160vh;
     justify-content: space-between;
-    padding-left: 7.5vw;
-    padding-right: 7.5vw;
-    padding-bottom: 24.5rem;
+    // padding-bottom: 24.5rem;
 }
 
 .whole-wrapper{
@@ -188,6 +186,12 @@
         max-height: 45vh
     }
 }
+}
+
+@media screen and (max-width:767px){
+  .cont{
+    padding-bottom: 24.5rem;
+  }
 }
 
 @media screen and (max-width:745px){
