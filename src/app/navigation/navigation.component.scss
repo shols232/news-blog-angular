@@ -68,7 +68,7 @@
 
 .nav-link{
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 18.5px;
 	display: block;
 	padding: 5px .55rem;
 	font-weight:320;
@@ -258,7 +258,7 @@
 @media screen and (max-width:1250px){
 	.nav-link{
 	  text-decoration: none;
-	  font-size: 16.5px;
+	  font-size: 16px;
 	  display: block;
 	  padding: 5px .35rem;
 	  margin-right: .6rem;
@@ -270,9 +270,6 @@
 		font-size: 18;
 		padding: 5px .4rem;
 		margin-right: 1rem;
-	  }
-	  .show-more{
-		  font-size: 18px;
 	  }
   }
 
