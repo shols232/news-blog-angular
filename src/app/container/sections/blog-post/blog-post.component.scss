@@ -5,16 +5,17 @@
     display: flex;
     .blog-post{
         .post-heading{
+            padding: 0 5%;
             h1{
                 color: rgb(74,74,74);
                 font-weight: 300;
                 margin-bottom:1rem;
-                font-size: 40px;
+                font-size: 38px;
             }
             img{
                 width: 95%;
                 margin: 0 2.5%;
-                height: 55vh;
+                height: 57vh;
             }
             margin-bottom: 3.8rem;
         }
