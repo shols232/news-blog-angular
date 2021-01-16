@@ -11,7 +11,7 @@
 }
 
 .whole-wrapper{
-  padding-bottom:3rem;
+  padding: 0 2rem 3rem 2rem;
 }
 
 .wrapper{
@@ -31,8 +31,6 @@
     border: 5px solid rgb(220,220,220, .1);
     transition: all 0.4s ease-out;
     box-shadow: 3.5px 3.5px 10px 2px rgb(180, 178, 178);
-    width: 80%;
-    margin: auto;
     .post-content{
       transition: all 0.4s ease-out;
         width: 100%;
@@ -172,6 +170,12 @@
     img{
       transform: scale(1.02);
     }
+  }
+}
+
+@media screen and (max-width:991px){
+  .whole-wrapper{
+    padding: 0 7vw;
   }
 }
 

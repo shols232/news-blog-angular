@@ -4,7 +4,6 @@
     background-color: #fff;
     display: flex;
     .blog-post{
-        flex: 2 2 65%;
         .post-heading{
             h1{
                 color: rgb(74,74,74);
@@ -13,7 +12,8 @@
                 font-size: 40px;
             }
             img{
-                width: 100%;
+                width: 95%;
+                margin: 0 2.5%;
                 height: 55vh;
             }
             margin-bottom: 3.8rem;
@@ -25,16 +25,16 @@
         }
         .post-body{
             img{
-                height: 40vh;
-                width: 45vw;
+                height: 37vh;
+                width: 38vw;
                 margin: 10px ;
                 float: right;
             }
             .innerHtmlCont{
-                margin-top:25px;
+                margin-top:20px;
                 p{
                     color:#4a4a4a;
-                    padding: 0 2.5%;
+                    padding: 0 1%;
                     margin-bottom: 1.5rem;
                     margin-top:0;
                     font-size:1.26rem;
@@ -50,8 +50,13 @@
             }
         }
     }
-    .ads{
-        flex: 1 1 30%;
+}
+
+@media screen and (max-width:991px){
+    .cont{
+        .blog-post{
+            padding: 0 6vw;
+        }
     }
 }
 
@@ -76,9 +81,12 @@
     }
 }
 
+
+
 @media screen and (max-width:650px){
     .cont{
         .blog-post{
+            padding: 0;
             .post-heading{
                 h1{
                     font-size: 35px !important;

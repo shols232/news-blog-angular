@@ -47,6 +47,9 @@
     50%{opacity: .75;}
     100%{opacity: 1;}
     }
+.main-content{
+    padding: 0 5vw;
+}
 
 .latest-topic-body{
     transition: all 0.4s ease-in-out;
@@ -107,35 +110,6 @@
     }
 }
 
-// .ads-headers{
-//     font-size: 14.5px;
-// }
-// .ads{
-//     display: flex;
-//     flex-wrap: wrap;
-//     overflow: hidden;
-//     width: 100%;
-//     scrollbar-width: none;
-//     &::-webkit-scrollbar {
-//         width: 0px;  /* Remove scrollbar space */
-//         background: transparent;  /* Optional: just make scrollbar invisible */
-//     }
-//     /* Optional: show position indicator in red */
-
-//     .ad{
-//         flex-direction: column;
-//         flex:1 1 100%;
-//         display: flex;
-//         flex-wrap: wrap;
-//         margin: 2px;
-//         div{
-//             img{
-//                 max-height: 100px !important;
-//             }
-//             flex: 0 0 100%;
-//         }
-//     }
-// }
 
 .headlines, .blog-sections{
     .heading{
@@ -153,7 +127,7 @@
         flex: 1 1 100%;
          img{
             transition: all .4s ease-in-out;
-            height: 15vh;
+            height: 21vh;
             width: 100%; 
          }
     }
@@ -191,7 +165,7 @@
             flex: 1 1 100%;
             overflow: hidden;
             img{
-                height: 25vh;
+                height: 21vh;
                 width: 100%;
             }
         }
@@ -246,36 +220,6 @@
         padding: 0;
     }
 
-    // .ads{
-    //     display: flex;
-    //     overflow: scroll;
-    //     scrollbar-width: none;
-    //     max-height: 850px;
-    //     width: 100vw;
-    //     margin-left: 0;
-    //     margin-right: 0;
-    //     padding: 0;
-    //     margin-bottom: 400px;
-
-    //     &::-webkit-scrollbar-thumb{
-    //         display: none;
-    //     }
-    //     ::-webkit-scrollbar {
-    //         width: 0px;  /* Remove scrollbar space */
-    //         background: transparent;  /* Optional: just make scrollbar invisible */
-    //     }
-    //     .ad{
-    //         flex-direction: row;
-    //         flex:1 1 100%;
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         margin: 2px;
-    //         div{
-    //             overflow: hidden;
-    //             flex: 0 0 100%;
-    //         }
-    //     }
-    // }
     .main-content{
         width: 90%;
         padding:0 8vw;
