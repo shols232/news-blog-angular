@@ -29,7 +29,7 @@ let urls = [
      ]
 
      let urls_revhits = [
-        // {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
+        {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_0'},
         // {'url': '://p422935.clksite.com/adServe/banners?tid=422935_829305_3'},
         // {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_4'},
         // {'url':'://p422935.clksite.com/adServe/banners?tid=422935_829305_5'}
