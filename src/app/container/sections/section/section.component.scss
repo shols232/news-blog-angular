@@ -271,7 +271,6 @@
     width: 90% !important;
     .post-content{
       display: table;
-      
         p{
           height: 25vh;
           display: table-cell;
@@ -357,6 +356,7 @@
 @media screen and (max-width:500px){
   .cont{padding: 0 2.5vw 0 2.5vw;}
 .latest-post{
+  width: 100%;
   .post-content{
     
     p{

@@ -20,6 +20,7 @@ import { AuthGuardService } from './container/sections/auth/auth-guard.service';
 import { VideosComponent } from './container/sections/videos/videos.component';
 import { TechnologyComponent } from './container/sections/technology/technology.component'
 import { ForiddenPageComponent } from './foridden-page/foridden-page.component'
+import { NewsComponent } from './container/sections/news/news.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, pathMatch:'full'},
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:'humanity', component:HumanityComponent},
     {path:'personal-stories', component:PersonalStoriesComponent},
     {path:'interviews', component:InterviewsComponent},
+    {path:'news', component:NewsComponent},
     {path:'environment', component:EnvironmentComponent},
     {path:'politics', component:PoliticsComponent},
     {path:'technology', component:TechnologyComponent},

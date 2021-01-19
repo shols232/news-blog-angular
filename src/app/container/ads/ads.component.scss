@@ -5,6 +5,8 @@
 .ads{
     display: flex;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
     overflow: hidden;
     width: 100%;
     scrollbar-width: none;
@@ -34,6 +36,7 @@
     .ads{
         display: flex;
         overflow: scroll;
+        position: relative;
         scrollbar-width: none;
         max-height: 850px;
         width: 100vw;

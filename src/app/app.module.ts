@@ -37,6 +37,7 @@ import { ForiddenPageComponent } from './foridden-page/foridden-page.component';
 import { TechnologyComponent } from './container/sections/technology/technology.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdsComponent } from './container/ads/ads.component';
+import { NewsComponent } from './container/sections/news/news.component';
 
 
 
@@ -72,6 +73,7 @@ import { AdsComponent } from './container/ads/ads.component';
     TechnologyComponent,
     FooterComponent,
     AdsComponent,
+    NewsComponent,
     
   ],
   imports: [
