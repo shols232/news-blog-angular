@@ -152,6 +152,7 @@
 .single-section{
     display: flex;
     transition: all .4s ease-in-out;
+    flex-wrap: nowrap;
     .headline-body{
         box-shadow: 0 0 9px rgb(177, 174, 174);
         transition: all .4s ease-in-out;
