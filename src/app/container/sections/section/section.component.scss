@@ -10,6 +10,10 @@
   margin-left: 25px;
 }
 
+.whole-wrapper{
+  padding: 0 4rem;
+}
+
 .wrapper{
     display: flex;
     transition: all 0.4s ease-out;
@@ -170,7 +174,9 @@
 }
 
 @media screen and (max-width:991px){
-
+  .whole-wrapper{
+    padding: 0 3rem;
+  }
 }
 
 @media screen and (max-width:900px){
@@ -247,6 +253,9 @@
   }
 }
 @media screen and (max-width:600px){
+  .whole-wrapper{
+    padding: 0;
+  }
   .cont{padding: 0 5vw 0 5vw;}
   .vjs-player_{
     height: 90%;
@@ -284,9 +293,9 @@
     width: 100%;
     flex-wrap: wrap;
     .story{
-      flex: 0 0 90%;
+      flex: 0 0 100%;
       display: flex;
-      margin: 10px 5%;
+      margin: 10px 0;
       border: none;
       box-shadow: 2px 2px 5px #ccc;
       background-color: #fff;
@@ -375,7 +384,6 @@
 }
 
 @media screen and (max-width:400px){
-  .cont{padding: 0 .5vw 0 .5vw;}
   .stories{
     .story{
       .story-head {
