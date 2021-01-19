@@ -61,7 +61,7 @@ let urls = [
 
             div.appendChild(elAd)
             ad1.appendChild(div)
-        }, num *2000)
+        }, num *3000)
            runIt2(num-1)
      }
 
@@ -85,7 +85,7 @@ let urls = [
             div.appendChild(elText)
             div.appendChild(elAd)
             ad1.appendChild(div)
-        }, num *2000)
+        }, num *2500)
         runIt(num-1)
      }
 
