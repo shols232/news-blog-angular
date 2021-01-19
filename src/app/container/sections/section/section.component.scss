@@ -325,18 +325,6 @@
           font-size: 18px;
         }
       }
-      // .story-footer{
-      //   flex: 1 1 100%;
-      //   height: 1.5rem;
-      //   .time{
-      //     border: none;
-      //     width: 45%;
-
-      //     min-width: fit-content;
-      //     border-width: 1px !important;
-      //     margin-right: .3rem !important;
-      //   }
-      // }
     }
   }
 
@@ -355,6 +343,9 @@
 }
 
 @media screen and (max-width:500px){
+  .section-name{
+    margin-left: 0;
+  }
   .cont{padding: 0 2.5vw 0 2.5vw;}
 .latest-post{
   width: 100%;
