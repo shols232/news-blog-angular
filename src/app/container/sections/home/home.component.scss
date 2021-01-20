@@ -154,12 +154,12 @@
     transition: all .4s ease-in-out;
     flex-wrap: nowrap;
     .headline-body{
-        box-shadow: 0 0 9px rgb(177, 174, 174);
+        box-shadow: 0 0 6px rgb(177, 174, 174);
         transition: all .4s ease-in-out;
         flex: 0 0 32%;
         display: flex;
         flex-wrap: wrap;
-        margin: 10px;
+        margin: 5px;
         overflow: hidden;
         .headline-image {
             transition: all .4s ease-in-out;
@@ -241,15 +241,17 @@
         padding:0 5vw;
     }
         .headlines{
-            .headline-header > p{
-                font-size: 14px !important;
-            }
+            .headline-body{
+                .headline-header > p{
+                    font-size: 14.5px;
+                }
+            } 
         }
     .single-section{
         .headline-body{
             .headline-header{
                  p{
-                    font-size: 14px;
+                    font-size: 14.5px;
                  }
             }
         }
