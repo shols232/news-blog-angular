@@ -4,6 +4,8 @@
     background-color: #fff;
     display: flex;
     .blog-post{
+        width: 90%;
+        margin: auto;
         .post-heading{
             h1{
                 color: rgb(74,74,74);
@@ -54,6 +56,7 @@
 
 @media screen and (max-width:991px){
     .cont{
+        width: 95%;
         .blog-post{
             padding: 0 9vw;
         }
@@ -86,6 +89,7 @@
 
 @media screen and (max-width:650px){
     .cont{
+        width: 100%;
         .blog-post{
             padding: 0;
             .post-heading{
