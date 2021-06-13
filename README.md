@@ -8,3 +8,10 @@ This was built with
 
 # Live Url
 https://vogue-eosin.vercel.app/
+
+### Preview Images
+
+<p float="middle">
+  <img src="github-images/1a.png" width="49%" />
+  <img src="github-images/1b.png" width="49%" />
+</p>
