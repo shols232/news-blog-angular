@@ -1,43 +1,48 @@
-<div class="cont">
-    <div class="whole-wrapper">
-        <div class="section-name">
-            <h2>{{section_name}}</h2>
-        </div>
-        <div class="latest-post" *ngIf="latest_post && section_name != 'VIDEOS'" [routerLink]="['/article', latest_post.slug]">
-            <div class="wrapper pointer">
-                <div class="pr-0 post-content-head">
-                    <div class="post-content">
-                        <p>{{latest_post.title}}</p>
+<div class="row">
+    <div class="col-lg-10 col-sm-12">
+        <div class="cont">
+            <div class="whole-wrapper">
+                <div class="section-name">
+                    <h2>{{section_name}}</h2>
+                </div>
+                <div class="latest-post" *ngIf="latest_post && section_name != 'VIDEOS'" [routerLink]="['/article', latest_post.slug]">
+                    <div class="wrapper pointer">
+                        <div class="pr-0 post-content-head">
+                            <div class="post-content">
+                                <p>{{latest_post.title}}</p>
+                            </div>
+                        </div>
+                        <div class="pl-0 post-content-body">
+                            <div class="post-image">
+                                <img *ngIf="latest_post.image" [img-preloader]="latest_post.image" alt="">
+                            <app-vjs-player class="vjs-player_" *ngIf="latest_post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: latest_post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="pl-0 post-content-body">
-                    <div class="post-image">
-                        <img *ngIf="latest_post.image" [img-preloader]="latest_post.image" alt="">
-                    <app-vjs-player class="vjs-player_" *ngIf="latest_post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: latest_post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                <div class="divider div-transparent div-dot" *ngIf="latest_post  && section_name != 'VIDEOS'"></div>
+                <div class="stories" *ngIf="posts">
+                    <div class="story pointer" *ngFor="let post of posts" [routerLink]="['/article', post.slug]">
+                        <div class="story-head">
+                            <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                            <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                        </div>
+                        <div class="story-body">
+                            <p>{{post.title}}</p>
+                        </div>
                     </div>
                 </div>
+                
             </div>
+            <app-pagination
+            [total_pages]="total_pages"
+            [prev_page_num]="prev_page_num"
+            [next_page_num]="next_page_num"
+            [current_page_num]="current_page_num"
+            (to_page)="toNewPage($event)"
+            *ngIf="posts"></app-pagination>
         </div>
-        <div class="divider div-transparent div-dot" *ngIf="latest_post  && section_name != 'VIDEOS'"></div>
-        <div class="stories" *ngIf="posts">
-            <div class="story pointer" *ngFor="let post of posts" [routerLink]="['/article', post.slug]">
-                <div class="story-head">
-                    <img *ngIf="post.image" [img-preloader]="post.image" alt="">
-                    <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
-                </div>
-                <div class="story-body">
-                    <p>{{post.title}}</p>
-                </div>
-            </div>
-        </div>
-        
     </div>
-    <app-pagination
-    [total_pages]="total_pages"
-    [prev_page_num]="prev_page_num"
-    [next_page_num]="next_page_num"
-    [current_page_num]="current_page_num"
-    (to_page)="toNewPage($event)"
-    *ngIf="posts"></app-pagination>
 </div>
+
 <!-- <app-footer></app-footer> -->

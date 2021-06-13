@@ -1,19 +1,23 @@
-<div class="cont">
-    <div class="blog-post" *ngIf="post">
-        <div class="post-heading">
-            <div class="post-title">
-                <h1>{{post.title}}</h1>
+<div class="row">
+    <div class="col-lg-10 col-sm-12">
+        <div class="cont">
+            <div class="blog-post" *ngIf="post">
+                <div class="post-heading">
+                    <div class="post-title">
+                        <h1>{{post.title}}</h1>
+                    </div>
+                    <div class="post-img">
+                        <img *ngIf="post.image" [img-preloader]="post.image" alt="">
+                        <app-vjs-player *ngIf="post.video" [options]="{ autoplay: true, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>        
+                    </div>
+                    <div class="post-date">
+                        <i class='ml-1 mr-2 bx bx-time'></i><span>{{post.posted|date:'EEEE MMMM d, y. H:mm'}}</span> 
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="innerHtmlCont" [innerHTML]="post.content" ></div>
+                </div>
             </div>
-            <div class="post-img">
-                <img *ngIf="post.image" [img-preloader]="post.image" alt="">
-                <app-vjs-player *ngIf="post.video" [options]="{ autoplay: true, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>        
-            </div>
-            <div class="post-date">
-                <i class='ml-1 mr-2 bx bx-time'></i><span>{{post.posted|date:'EEEE MMMM d, y. H:mm'}}</span> 
-            </div>
-        </div>
-        <div class="post-body">
-            <div class="innerHtmlCont" [innerHTML]="post.content" ></div>
         </div>
     </div>
 </div>
