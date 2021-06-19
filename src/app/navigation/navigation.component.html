@@ -32,7 +32,7 @@
 
   <div class="backdrop" (click)="toggleMenu()" *ngIf="menuState == 'out'"></div>
     <div id="sidebarMenu" [@slideInOut]="menuState">
-      <a class="navbar-menu-brand">DaincyBlog</a>
+      <a class="navbar-menu-brand">SkrapNews</a>
       <ul class="sidebarMenuInner straight-nav" >
         <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/']" [routerLinkActiveOptions]="{'exact':true}" routerLinkActive='navlink-active'>Home</a>
             <a class="nav-link-b" (click)="toggleMenu()" [routerLink]="['/section', 'politics']" routerLinkActive='navlink-active'>Politics</a>
