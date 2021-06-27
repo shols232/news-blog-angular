@@ -39,22 +39,9 @@
 .navbar-color{
 	// background-color: rgb(134, 38, 185);
 	// background:linear-gradient(45deg, rgb(177, 177, 179) 27.5%, #ccc 27.5%);
-	background:linear-gradient(45deg, rgb(185, 52, 174) 27.5%, rgba(209, 107, 209, .8) 27.5%);
+	background:linear-gradient(45deg, rgb(185, 52, 174) 27.5%, #8c0E7E 27.5%);
 	// background: linear-gradient(to right, );
 }
-
-// .navbar-color:before{
-// 	content: "";
-// 	position: absolute;
-// 	top: 0;
-
-// 	bottom: 0;
-// 	left: 0;
-// 	width: 30%;
-// 	background: rgb(186, 76, 245);
-// 	transform: skew(-30deg);
-// 	transform-origin:top;
-// }
 
 
 .navbar-nav{
@@ -237,7 +224,7 @@
     padding-top: 15px;
 	background: #fff;
 	border-right: 1.1px solid rgb(168, 42, 158);
-	background-color: rgb(189, 62, 178, .99);
+	background-color: #8c0E7E;
 	// background:linear-gradient(45deg, rgb(220, 220, 221) 47.5%, rgb(214, 213, 213) 47.5%);
 	box-shadow: 0 0 5px #ccc;
 	.navbar-menu-brand{
