@@ -1,5 +1,6 @@
 import { LowerCasePipe } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { SectionPost, FullSectionPost } from '../shared/section-post.model'
@@ -23,8 +24,11 @@ export class SectionComponent implements OnInit, OnDestroy {
   constructor(
     private SectionsService: SectionsService, 
     private router: Router, 
-    private route: ActivatedRoute
-    ) { }
+    private route: ActivatedRoute,
+    private titleService: Title
+    ) { 
+      this.titleService.setTitle(this.section_name);
+    }
 
   ngOnInit(): void {
     this.routeSub = this.route.queryParams.subscribe(params => {
@@ -38,7 +42,6 @@ export class SectionComponent implements OnInit, OnDestroy {
   }
 
   assignData(data, page_1=true){
-      console.log(data)
       this.next_page_num = data.next_page_number
       this.prev_page_num = data.prev_page_number
       this.total_pages = data.total_pages
@@ -53,7 +56,6 @@ export class SectionComponent implements OnInit, OnDestroy {
 
   onLoad(){
     this.SectionsService.getSectionPosts(this.section_name).subscribe(data => {
-      console.log(data)
       this.assignData(data)
     }, error => {
       if(error){

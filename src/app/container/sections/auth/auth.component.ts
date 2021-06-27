@@ -11,7 +11,10 @@ import { AuthService } from './auth.service'
 })
 export class AuthComponent implements OnInit, OnDestroy {
   authSub: Subscription
-  constructor(private authService: AuthService, private router: Router) { }
+  title='Login'
+  constructor(private authService: AuthService, private router: Router) { 
+    
+  }
 
   ngOnInit(): void {
   }

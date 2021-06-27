@@ -4,6 +4,7 @@ import { AuthService } from './container/sections/auth/auth.service';
 import { filter } from 'rxjs/operators';
 import { Router, NavigationEnd } from '@angular/router';
 import { environment } from '../environments/environment'
+import { Title } from '@angular/platform-browser';
 
 declare var gtag
 
@@ -16,7 +17,9 @@ declare var gtag
 export class AppComponent implements OnInit {
   title = 'SkrapNews';
 
-  constructor(private authService: AuthService, private cookieService: CookieService, router: Router){
+  constructor(private titleService: Title, private authService: AuthService, private cookieService: CookieService, router: Router){
+
+    this.titleService.setTitle('Home');
     const navEndEvent$ = router.events.pipe(
       filter(e => e instanceof NavigationEnd)
     );
