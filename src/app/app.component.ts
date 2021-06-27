@@ -18,10 +18,10 @@ export class AppComponent implements OnInit {
   title = 'SkrapNews';
 
   constructor(private titleService: Title, private authService: AuthService, private cookieService: CookieService, router: Router){
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + environment.analyticsCode;
-    document.head.prepend(script);
+    // const script = document.createElement('script');
+    // script.async = true;
+    // script.src = 'https://www.googletagmanager.com/gtag/js?id=' + environment.analyticsCode;
+    // document.head.prepend(script);
     // this.titleService.setTitle('Home');
     const navEndEvent$ = router.events.pipe(
       filter(e => e instanceof NavigationEnd)
