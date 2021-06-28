@@ -38,6 +38,11 @@ import { TechnologyComponent } from './container/sections/technology/technology.
 import { FooterComponent } from './footer/footer.component';
 import { AdsComponent } from './container/ads/ads.component';
 import { NewsComponent } from './container/sections/news/news.component';
+import { RomanceComponent } from './container/sections/romance/romance.component';
+import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
+import { CrimeComponent } from './container/sections/crime/crime.component';
+import { FeaturesComponent } from './container/sections/features/features.component';
+import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
 
 
 
@@ -74,6 +79,11 @@ import { NewsComponent } from './container/sections/news/news.component';
     FooterComponent,
     AdsComponent,
     NewsComponent,
+    RomanceComponent,
+    SDGsComponent,
+    CrimeComponent,
+    FeaturesComponent,
+    ContactUsComponent,
     
   ],
   imports: [

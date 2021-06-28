@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   entertainment_latest: FullSectionPost[] = [];
   business_latest: FullSectionPost[] = [];
   politics_latest: FullSectionPost[] = [];
-  humanity_latest: FullSectionPost[] = [];
+  romance_latest: FullSectionPost[] = [];
   // constructor(private sectionsService: SectionsService) { }
 
   // ngOnInit(): void {
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.entertainment_latest = data.entertainment
       this.business_latest = data.business
       this.politics_latest = data.politics
-      this.humanity_latest = data.humanity
+      this.romance_latest = data.romance
       this.headlines = data.headlines
     })
   }

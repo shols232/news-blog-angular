@@ -25,7 +25,7 @@ export class SectionsService{
         'entertainment':FullSectionPost[],
         'business':FullSectionPost[],
         'politics':FullSectionPost[], 
-        'humanity':FullSectionPost[]}
+        'romance':FullSectionPost[]}
         >(environment.backendUrl + '/post/home')
     }
 

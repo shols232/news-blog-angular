@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-lg-9 mx-auto col-sm-12">
+        <main>
+            <h1>Contact Us</h1>
+            <p>Please fill this short form to get in touch with us and we will get back to you as soon as possible.</p>
+            <div class="form">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="name">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" ngModel>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" ngModel>
+                    </div>
+                    <div class="subject">
+                        <label for="subject">Subject: </label>
+                        <input type="text" name="subject" ngModel>
+                    </div>
+                    <div class="message">
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" ngModel cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin-bottom: 18px;
+    }
+
+    .form{
+        width: 80%;
+    }
+    p{
+        width: 80%;
+        text-align: center;
+    }
+    form{
+        div{
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            label{
+                margin-bottom: 8px;
+            }
+
+            input{
+                width: 100%;
+                padding: 6px;
+                outline: none;
+            }
+
+            textarea{
+                padding: 6px;
+                outline: none;
+            }
+        }
+
+        button{
+            width: 100%;
+            padding: 9px;
+            color: white;
+            background-color: #8C0E7E;
+            outline: none;
+            border: none;
+            font-size: 17px;
+
+            &:hover{
+                background-color: #d81bc2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main{
+        .form{
+            width: 95%;
+        }
+    }
+}

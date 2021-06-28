@@ -103,10 +103,10 @@
                     </div>
                     <div class="fashion">
                         <div class="heading">
-                            <span class="section">HUMANITY</span>
+                            <span class="section">ROMANCE</span>
                         </div>
                         <div class="row single-section">
-                            <div class="headline-body pointer" *ngFor="let post of humanity_latest" [routerLink]="['/article', post.slug]">
+                            <div class="headline-body pointer" *ngFor="let post of romance_latest" [routerLink]="['/article', post.slug]">
                                 <div class="headline-image">
                                     <img *ngIf="post.image" [img-preloader]="post.image" alt="">
                                     <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
@@ -115,7 +115,7 @@
                                     <p>{{post.title}}</p>
                                 </div>
                             </div>
-                            <div *ngIf="humanity_latest.length == 0" class="empty">
+                            <div *ngIf="romance_latest.length == 0" class="empty">
                                 <p>No posts here yet...</p>
                             </div>
                         </div>

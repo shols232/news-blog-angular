@@ -21,6 +21,11 @@ import { VideosComponent } from './container/sections/videos/videos.component';
 import { TechnologyComponent } from './container/sections/technology/technology.component'
 import { ForiddenPageComponent } from './foridden-page/foridden-page.component'
 import { NewsComponent } from './container/sections/news/news.component';
+import { CrimeComponent } from './container/sections/crime/crime.component';
+import { RomanceComponent } from './container/sections/romance/romance.component';
+import { FeaturesComponent } from './container/sections/features/features.component';
+import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
+import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, pathMatch:'full'},
@@ -29,16 +34,17 @@ const routes: Routes = [
     {path:'entertainment', component:EntertainmentComponent},
     {path:'sports', component:SportsComponent},
     {path:'business', component:BusinessComponent},
-    {path:'women-issues', component:WomenComponent},
+    {path:'crime', component:CrimeComponent},
     {path:'videos', component:VideosComponent},
-    {path:'research-articles', component:ResearchArticles},
-    {path:'humanity', component:HumanityComponent},
-    {path:'personal-stories', component:PersonalStoriesComponent},
+    {path:'romance', component:RomanceComponent},
+    {path:'features', component:FeaturesComponent},
+    {path:'SDGs', component:SDGsComponent},
+    {path:'contact-us', component:ContactUsComponent},
     {path:'interviews', component:InterviewsComponent},
-    {path:'news', component:NewsComponent},
-    {path:'environment', component:EnvironmentComponent},
+    // {path:'news', component:NewsComponent},
+    // {path:'environment', component:EnvironmentComponent},
     {path:'politics', component:PoliticsComponent},
-    {path:'technology', component:TechnologyComponent},
+    // {path:'technology', component:TechnologyComponent},
   ]},
   {path:'article/:slug', component:BlogPostComponent},
   {path:'404-error', component:PageNotFoundComponent},
