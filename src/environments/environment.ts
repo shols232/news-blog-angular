@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://127.0.0.1:8000',
+  // backendUrl: 'http://127.0.0.1:8000',
+  backendUrl: 'https://damnews-site.herokuapp.com',
   analyticsCode: 'J7P7VDJ5XL'
 };
 
