@@ -43,6 +43,7 @@ import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
 import { CrimeComponent } from './container/sections/crime/crime.component';
 import { FeaturesComponent } from './container/sections/features/features.component';
 import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
+import { HealthComponent } from './container/sections/health/health.component';
 
 
 
@@ -84,6 +85,7 @@ import { ContactUsComponent } from './container/sections/contact-us/contact-us.c
     CrimeComponent,
     FeaturesComponent,
     ContactUsComponent,
+    HealthComponent,
     
   ],
   imports: [

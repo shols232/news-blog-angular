@@ -26,6 +26,7 @@ import { RomanceComponent } from './container/sections/romance/romance.component
 import { FeaturesComponent } from './container/sections/features/features.component';
 import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
 import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
+import { HealthComponent } from './container/sections/health/health.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, pathMatch:'full'},
@@ -44,6 +45,7 @@ const routes: Routes = [
     // {path:'news', component:NewsComponent},
     // {path:'environment', component:EnvironmentComponent},
     {path:'politics', component:PoliticsComponent},
+    {path:'health', component:HealthComponent},
     // {path:'technology', component:TechnologyComponent},
   ]},
   {path:'article/:slug', component:BlogPostComponent},

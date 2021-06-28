@@ -4,9 +4,9 @@
 	margin-bottom: 4.5rem;
 	display: flex;
 	flex-wrap: wrap;
-	position: static;
+	position: fixed;
 	top: 0;
-	z-index: 10000;
+	z-index: 1;
 	width: 100%;
 	transition: all .5s linear;
 	.bottom-nav{
