@@ -17,6 +17,7 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
   @Input() options: {
       fluid: boolean,
       aspectRatio: string,
+      poster: string,
       autoplay: boolean,
       sources: {
           src: string,
@@ -31,6 +32,7 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // instantiate Video.js
+    this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
     this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {
       console.log('onPlayerReady', this);
     });
