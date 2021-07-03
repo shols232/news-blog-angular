@@ -17,6 +17,7 @@ declare var gtag: Function
 export class AppComponent implements OnInit {
   title = 'SkrapNews';
 
+  
   constructor(private titleService: Title, private authService: AuthService, private cookieService: CookieService, router: Router){
     // const script = document.createElement('script');
     // script.async = true;
