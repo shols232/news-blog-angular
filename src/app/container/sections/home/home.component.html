@@ -65,10 +65,10 @@
                     </div>
                     <div class="crime">
                         <div class="heading">
-                            <span class="section">BUSINESS</span>
+                            <span class="section">CRIME</span>
                         </div>
                         <div class="row single-section">
-                            <div class="headline-body pointer" *ngFor="let post of business_latest" [routerLink]="['/article', post.slug]">
+                            <div class="headline-body pointer" *ngFor="let post of crime_latest" [routerLink]="['/article', post.slug]">
                                 <div class="headline-image">
                                     <img *ngIf="post.image" [img-preloader]="post.image" alt="">
                                     <app-vjs-player class="vjs-player_" *ngIf="post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: post.video, type: 'video/mp4' }]}"></app-vjs-player>
@@ -77,7 +77,7 @@
                                     <p>{{post.title}}</p>
                                 </div>
                             </div>
-                            <div *ngIf="business_latest.length == 0" class="empty">
+                            <div *ngIf="crime_latest.length == 0" class="empty">
                                 <p>No posts here yet...</p>
                             </div>
                         </div>

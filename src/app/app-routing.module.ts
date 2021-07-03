@@ -7,20 +7,12 @@ import { SportsComponent } from './container/sections/sports/sports.component'
 import { CreatePostComponent } from './container/sections/create-post/create-post.component'
 import { BlogPostComponent } from './container/sections/blog-post/blog-post.component';
 import { BusinessComponent } from './container/sections/business/business.component';
-import { WomenComponent } from './container/sections/women-issues/women.component';
-import { ResearchArticles } from './container/sections/research-articles/research-articles.component';
-import { HumanityComponent } from './container/sections/humanity/humanity.component';
-import { PersonalStoriesComponent } from './container/sections/personal-stories/personal-stories.component';
-import { InterviewsComponent } from './container/sections/interviews/interviews.component';
-import { EnvironmentComponent } from './container/sections/environment/environment.component';
 import { PoliticsComponent } from './container/sections/politics/politics.component';
 import { PageNotFoundComponent } from './container/page-not-found/page-not-found.component';
 import { AuthComponent } from './container/sections/auth/auth.component';
 import { AuthGuardService } from './container/sections/auth/auth-guard.service';
 import { VideosComponent } from './container/sections/videos/videos.component';
-import { TechnologyComponent } from './container/sections/technology/technology.component'
 import { ForiddenPageComponent } from './foridden-page/foridden-page.component'
-import { NewsComponent } from './container/sections/news/news.component';
 import { CrimeComponent } from './container/sections/crime/crime.component';
 import { RomanceComponent } from './container/sections/romance/romance.component';
 import { FeaturesComponent } from './container/sections/features/features.component';
@@ -41,9 +33,6 @@ const routes: Routes = [
     {path:'features', component:FeaturesComponent},
     {path:'SDGs', component:SDGsComponent},
     {path:'contact-us', component:ContactUsComponent},
-    {path:'interviews', component:InterviewsComponent},
-    // {path:'news', component:NewsComponent},
-    // {path:'environment', component:EnvironmentComponent},
     {path:'politics', component:PoliticsComponent},
     {path:'health', component:HealthComponent},
     // {path:'technology', component:TechnologyComponent},

@@ -18,12 +18,6 @@ import { VjsPlayerComponent } from './utils/vjs-player/vjs-player.component';
 import { BlogPostComponent } from './container/sections/blog-post/blog-post.component';
 import { SportsComponent } from './container/sections/sports/sports.component';
 import { BusinessComponent } from './container/sections/business/business.component';
-import { WomenComponent } from './container/sections/women-issues/women.component';
-import { ResearchArticles } from './container/sections/research-articles/research-articles.component';
-import { HumanityComponent } from './container/sections/humanity/humanity.component';
-import { PersonalStoriesComponent } from './container/sections/personal-stories/personal-stories.component';
-import { InterviewsComponent } from './container/sections/interviews/interviews.component';
-import { EnvironmentComponent } from './container/sections/environment/environment.component'
 import { HttpClientModule } from '@angular/common/http';
 import { PoliticsComponent } from './container/sections/politics/politics.component';
 import { AuthComponent } from './container/sections/auth/auth.component';
@@ -34,10 +28,8 @@ import { PageNotFoundComponent } from './container/page-not-found/page-not-found
 import { CookieService } from 'ngx-cookie-service';
 import { VideosComponent } from './container/sections/videos/videos.component';
 import { ForiddenPageComponent } from './foridden-page/foridden-page.component';
-import { TechnologyComponent } from './container/sections/technology/technology.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdsComponent } from './container/ads/ads.component';
-import { NewsComponent } from './container/sections/news/news.component';
 import { RomanceComponent } from './container/sections/romance/romance.component';
 import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
 import { CrimeComponent } from './container/sections/crime/crime.component';
@@ -62,12 +54,6 @@ import { HealthComponent } from './container/sections/health/health.component';
     BlogPostComponent,
     SportsComponent,
     BusinessComponent,
-    WomenComponent,
-    ResearchArticles,
-    HumanityComponent,
-    PersonalStoriesComponent,
-    InterviewsComponent,
-    EnvironmentComponent,
     PoliticsComponent,
     AuthComponent,
     toggleVisibilityDirective,
@@ -76,10 +62,8 @@ import { HealthComponent } from './container/sections/health/health.component';
     PageNotFoundComponent,
     VideosComponent,
     ForiddenPageComponent,
-    TechnologyComponent,
     FooterComponent,
     AdsComponent,
-    NewsComponent,
     RomanceComponent,
     SDGsComponent,
     CrimeComponent,

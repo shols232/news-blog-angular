@@ -23,7 +23,7 @@ export class SectionsService{
         {'latest':FullSectionPost, 
         'headlines':FullSectionPost[],
         'entertainment':FullSectionPost[],
-        'business':FullSectionPost[],
+        'crime':FullSectionPost[],
         'politics':FullSectionPost[], 
         'romance':FullSectionPost[]}
         >(environment.backendUrl + '/post/home')

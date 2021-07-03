@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   headlines: FullSectionPost[] = [];
   getPostsSub: Subscription;
   entertainment_latest: FullSectionPost[] = [];
-  business_latest: FullSectionPost[] = [];
+  crime_latest: FullSectionPost[] = [];
   politics_latest: FullSectionPost[] = [];
   romance_latest: FullSectionPost[] = [];
   // constructor(private sectionsService: SectionsService) { }
@@ -59,8 +59,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       }else{
         this.latest_post = null
       }
+      console.log(data)
       this.entertainment_latest = data.entertainment
-      this.business_latest = data.business
+      this.crime_latest = data.crime
       this.politics_latest = data.politics
       this.romance_latest = data.romance
       this.headlines = data.headlines
