@@ -267,7 +267,12 @@
     height: 90%;
     width: 94%;
     padding: 10px;
-    background-color: black;
+    // background-color: black;
+}
+.video-js {
+  .vjs-tech{
+    position: unset;
+  }
 }
   .section-name{
     h2{
