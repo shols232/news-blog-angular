@@ -34,20 +34,27 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
     // instantiate Video.js
     var src = this.options.sources[0].src; ///video url not youtube or vimeo,just video on server
 
-    this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
+    // this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
     this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {
       console.log('onPlayerReady', this);
+      var canvas = document.createElement('canvas');
+      canvas.width = 240; 
+      canvas.height = 240;
+      var context = canvas.getContext('2d');
+
+      context.drawImage(this.player, 0, 0, canvas.width, canvas.height);
+      this.player.poster(canvas.toDataURL('image/jpeg'));
     });
 
-    var canvas = document.createElement('canvas');
-    canvas.width = 240; 
-    canvas.height = 240;
-    var context = canvas.getContext('2d');
+    // var canvas = document.createElement('canvas');
+    // canvas.width = 240; 
+    // canvas.height = 240;
+    // var context = canvas.getContext('2d');
 
-    this.player.addEventListener('loadeddata', function() {
-        context.drawImage(this.player, 0, 0, canvas.width, canvas.height);
-        this.player.poster(canvas.toDataURL('image/jpeg'));
-    });
+    // this.player.addEventListener('loadeddata', function() {
+    //     context.drawImage(this.player, 0, 0, canvas.width, canvas.height);
+    //     this.player.poster(canvas.toDataURL('image/jpeg'));
+    // });
   }
 
   ngOnDestroy() {
