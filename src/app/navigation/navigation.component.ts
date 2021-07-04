@@ -9,11 +9,11 @@ import {  trigger, state, style, transition, animate } from '@angular/animations
   animations: [
     trigger('slideInOut', [
       state('in', style({
-        width: '0px',
+        display: 'none',
         border: 'none'
       })),
       state('out', style({
-        width: '100%'
+        display: 'block'
       })),
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
