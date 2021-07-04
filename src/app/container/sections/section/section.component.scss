@@ -8,6 +8,7 @@
 
 .section-name{
   margin-left: 25px;
+  margin-bottom: 1.4rem;
 }
 
 .whole-wrapper{
@@ -207,7 +208,7 @@
   .wrapper{
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
   }
   .latest-post{
     .post-content{
