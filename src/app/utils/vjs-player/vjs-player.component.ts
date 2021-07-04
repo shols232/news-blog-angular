@@ -31,35 +31,11 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    // instantiate Video.js
     var src = this.options.sources[0].src; ///video url not youtube or vimeo,just video on server
-    this.options.poster = "https://thumbs.dreamstime.com/b/donkey-isolated-white-background-194708123.jpg"
-    const onPlayerReady = () => {
-      console.log('onPlayerReady', this);
-      
-      var canvas = document.createElement('canvas');
-      canvas.width = 400; 
-      canvas.height = 400;
-      var context = canvas.getContext('2d');
-      console.log(this.target.nativeElement)
-      setTimeout(() => {
-        context.drawImage(this.target.nativeElement, 0, 0, canvas.width, canvas.height);
-        this.player.poster(canvas.toDataURL('image/jpeg'));
-      }, 5000);
-    }
-    // this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
-    this.player = videojs(this.target.nativeElement, this.options, onPlayerReady);
+    this.options.poster = "/assets/video-poster-big.jpg"
 
+    this.player = videojs(this.target.nativeElement, this.options);
 
-    // var canvas = document.createElement('canvas');
-    // canvas.width = 240; 
-    // canvas.height = 240;
-    // var context = canvas.getContext('2d');
-
-    // this.player.addEventListener('loadeddata', function() {
-    //     context.drawImage(this.player, 0, 0, canvas.width, canvas.height);
-    //     this.player.poster(canvas.toDataURL('image/jpeg'));
-    // });
   }
 
   ngOnDestroy() {
