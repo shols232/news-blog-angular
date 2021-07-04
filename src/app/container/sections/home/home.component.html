@@ -11,7 +11,7 @@
                         <div class="post-image">
                             <img *ngIf="latest_post.image" [img-preloader]="latest_post.image"
                              alt="">
-                             <app-vjs-player class="vjs-player_" *ngIf="latest_post.video" [options]="{ autoplay: false, controls: true, sources: [{ src: latest_post.video, type: 'video/mp4' }]}"></app-vjs-player>
+                             <app-vjs-player class="vjs-player_" *ngIf="latest_post.video" [options]="{ autoplay: false, fluid:true, controls: true, sources: [{ src: latest_post.video, type: 'video/mp4' }]}"></app-vjs-player>
                         </div>
                         <div class="post-heading">
                             <p>{{latest_post.title}}</p>
