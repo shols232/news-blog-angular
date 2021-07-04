@@ -41,8 +41,8 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
       canvas.width = 240; 
       canvas.height = 240;
       var context = canvas.getContext('2d');
-
-      context.drawImage(this.target, 0, 0, canvas.width, canvas.height);
+      console.log(this.target.nativeElement)
+      context.drawImage(this.target.nativeElement, 0, 0, canvas.width, canvas.height);
       this.player.poster(canvas.toDataURL('image/jpeg'));
     });
 
