@@ -31,7 +31,7 @@ const routes: Routes = [
     {path:'videos', component:VideosComponent},
     {path:'romance', component:RomanceComponent},
     {path:'features', component:FeaturesComponent},
-    {path:'SDGs', component:SDGsComponent},
+    {path:'sdgs', component:SDGsComponent},
     {path:'contact-us', component:ContactUsComponent},
     {path:'politics', component:PoliticsComponent},
     {path:'health', component:HealthComponent},
