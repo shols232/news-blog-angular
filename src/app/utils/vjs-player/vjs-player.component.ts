@@ -33,10 +33,9 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // instantiate Video.js
     var src = this.options.sources[0].src; ///video url not youtube or vimeo,just video on server
-
-    // this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
-    this.player = videojs(this.target.nativeElement, this.options, function onPlayerReady() {
+    const onPlayerReady = () => {
       console.log('onPlayerReady', this);
+      
       var canvas = document.createElement('canvas');
       canvas.width = 240; 
       canvas.height = 240;
@@ -44,7 +43,10 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
       console.log(this.target.nativeElement)
       context.drawImage(this.target.nativeElement, 0, 0, canvas.width, canvas.height);
       this.player.poster(canvas.toDataURL('image/jpeg'));
-    });
+    }
+    // this.options.poster = this.options.sources[0].src.replace(/.mp4/,'.jpg')
+    this.player = videojs(this.target.nativeElement, this.options, onPlayerReady);
+
 
     // var canvas = document.createElement('canvas');
     // canvas.width = 240; 
