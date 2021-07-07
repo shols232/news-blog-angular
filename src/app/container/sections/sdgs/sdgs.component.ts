@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sdgs.component.scss']
 })
 export class SDGsComponent implements OnInit {
-  section_name: string = 'SDGs'
+  section_name: string = 'SDGS'
   constructor() { }
 
   ngOnInit(): void {
