@@ -19,6 +19,7 @@ import { FeaturesComponent } from './container/sections/features/features.compon
 import { SDGsComponent } from './container/sections/sdgs/sdgs.component';
 import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
 import { HealthComponent } from './container/sections/health/health.component';
+import { NewsComponent } from './container/sections/news/news.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent, pathMatch:'full'},
@@ -28,6 +29,7 @@ const routes: Routes = [
     {path:'sports', component:SportsComponent},
     {path:'business', component:BusinessComponent},
     {path:'crime', component:CrimeComponent},
+    {path:'news', component:NewsComponent},
     {path:'videos', component:VideosComponent},
     {path:'romance', component:RomanceComponent},
     {path:'features', component:FeaturesComponent},

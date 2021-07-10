@@ -36,6 +36,7 @@ import { CrimeComponent } from './container/sections/crime/crime.component';
 import { FeaturesComponent } from './container/sections/features/features.component';
 import { ContactUsComponent } from './container/sections/contact-us/contact-us.component';
 import { HealthComponent } from './container/sections/health/health.component';
+import { NewsComponent } from './container/sections/news/news.component';
 
 
 
@@ -70,6 +71,7 @@ import { HealthComponent } from './container/sections/health/health.component';
     FeaturesComponent,
     ContactUsComponent,
     HealthComponent,
+    NewsComponent,
     
   ],
   imports: [
