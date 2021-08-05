@@ -7,7 +7,7 @@ This was built with
 - Angular
 
 # Live Url
-https://vogue-eosin.vercel.app/
+https://skrapnews.com
 
 ### Preview Images
 
